@@ -8,19 +8,6 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 
 ## 📋 Tabla de Enlaces por Sprint
 
-### Sprint 0: Diseño del Modelo de Base de Datos
-**Objetivo**: Definición y Diseño del Modelo de Datos  
-**Historia de Usuario**: HU2  
-**Prioridad**: Alta | **Duración**: 1 semana
-
-#### 📁 Código Fuente
-- **Esquema de Base de Datos**: [Esquema de datos de TransiLoja.json](https://github.com/0KevinB/TIC-TransiLoja/blob/main/anexos/Esquema%20de%20datos%20de%20TransiLoja.json)
-- **Diagrama C4**: [Diagrama-C4-TransiLoja.md](https://github.com/0KevinB/TIC-TransiLoja/blob/main/anexos/Diagrama-C4-TransiLoja.md)
-- **Configuración Firebase Web**: [firebase.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/lib/firebase.ts)
-- **Configuración Firebase Móvil**: [firebase.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/lib/firebase.ts)
-
----
-
 ### Sprint 1: Autenticación de Administrador
 **Objetivo**: Gestión de Autenticación de Admin  
 **Historia de Usuario**: HU3  
@@ -45,6 +32,7 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 #### 📁 Código Fuente (Web)
 - **Página de Paradas**: [stops/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/stops/page.tsx)
 - **Página de Horarios**: [stop-times/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/stop-times/page.tsx)
+- **Página de Calendarios**: [calendars/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/calendars/page.tsx)
 - **Hook de Paradas**: [useStops.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/hooks/useStops.ts)
 
 #### 🧪 Tests
@@ -96,7 +84,7 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 **Prioridad**: Alta | **Duración**: 1 semana
 
 #### 📁 Código Fuente (Móvil)
-- **Pantalla Principal con Mapa**: [index.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/(tabs)/index.tsx)
+- **Pantalla de Mapa**: [map.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/map.tsx)
 - **Pantalla de Paradas**: [stops.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/(tabs)/stops.tsx)
 - **Detalle de Parada**: [stop-detail.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/stop-detail.tsx)
 - **Hook de Ubicación**: [useLocation.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/hooks/useLocation.ts)
@@ -125,26 +113,19 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 
 ---
 
-### Sprint 8: Planificación de Viajes y Gestión de Conductores
-**Objetivo**: Planificación de Viajes y Gestión de Conductores  
-**Historias de Usuario**: HU12, HU13, HU17  
+### Sprint 8: Planificación de Viajes
+**Objetivo**: Planificación de Viajes (Usuario)  
+**Historias de Usuario**: HU12, HU13  
 **Prioridad**: Alta | **Duración**: 1.5 semanas
 
 #### 📁 Código Fuente (Móvil - Planificación)
 - **Pantalla de Exploración/Búsqueda**: [explore.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/(tabs)/explore.tsx)
-- **Pantalla de Mapa**: [map.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/map.tsx)
+- **Pantalla de Mapa con Planificador**: [map.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/map.tsx)
 - **Algoritmo RAPTOR**: [raptor.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/lib/raptor.ts)
 - **Manager RAPTOR**: [raptorManager.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/lib/raptorManager.ts)
 - **Hook de Routing**: [useRouting.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/hooks/useRouting.ts)
 - **Hook de Direcciones**: [useDirections.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/hooks/useDirections.ts)
 - **Búsqueda Optimizada**: [useOptimizedSearch.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/hooks/useOptimizedSearch.ts)
-
-#### 📁 Código Fuente (Web - Conductores)
-- **Página de Conductores**: [drivers/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/drivers/page.tsx)
-- **Página de Asignaciones**: [assignments/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/assignments/page.tsx)
-
-#### 🧪 Tests
-- **E2E Conductores**: [conductores.cy.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/cypress/e2e/conductores.cy.ts)
 
 ---
 
@@ -183,27 +164,30 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 
 ---
 
-### Sprint 11: Gestión de Viajes
-**Objetivo**: Gestión de Buses y Viajes Simulados  
-**Historia de Usuario**: HU16  
+### Sprint 11: Gestión de Viajes y Conductores
+**Objetivo**: Gestión de Buses, Viajes Simulados y Conductores  
+**Historias de Usuario**: HU16, HU17  
 **Prioridad**: Alta | **Duración**: 2 semanas
 
 #### 📁 Código Fuente (Web)
 - **Página de Buses**: [buses/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/buses/page.tsx)
 - **Página de Viajes**: [trips/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/trips/page.tsx)
+- **Página de Conductores**: [drivers/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/drivers/page.tsx)
+- **Página de Asignaciones**: [assignments/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/assignments/page.tsx)
 - **Página de Buses en Vivo**: [live-buses/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/live-buses/page.tsx)
 - **Página de Buses en Tiempo Real**: [real-time-buses/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/real-time-buses/page.tsx)
 
-#### 📁 Código Fuente (Móvil)
+#### 📁 Código Fuente (Móvil - Conductores)
 - **Pantalla Mis Buses**: [my-buses.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/(tabs)/my-buses.tsx)
+- **Pantalla de Conductores**: [conductores.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/conductores.tsx)
 - **Simulador de Bus**: [simulador-bus.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/simulador-bus.tsx)
 - **Tracking de Conductor**: [conductor-tracking.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/conductor-tracking.tsx)
 - **Servicio de Ubicación del Conductor**: [driverLocationService.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/lib/driverLocationService.ts)
-- **Hook de Buses en Vivo**: [useLiveBuses.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/hooks/useLiveBuses.ts)
 
 #### 🧪 Tests
 - **E2E Buses**: [buses.cy.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/cypress/e2e/buses.cy.ts)
 - **E2E Viajes**: [viajes.cy.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/cypress/e2e/viajes.cy.ts)
+- **E2E Conductores**: [conductores.cy.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/cypress/e2e/conductores.cy.ts)
 
 ---
 
@@ -218,10 +202,13 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 - **Servicios GTFS (Web)**: [lib/services/gtfs/](https://github.com/0KevinB/TIC-TransiLoja/tree/main/Web/lib/services/gtfs)
 - **Servicios GTFS (Móvil)**: [lib/services/](https://github.com/0KevinB/TIC-TransiLoja/tree/main/App-Movil/lib/services)
 
-#### 📁 Recursos
+#### 📁 Recursos y Visualizadores
+- **Visor de Esquemas de Datos**: https://transi-loja.vercel.app/Esquemas-Datos.html
+- **Página de Anexos**: [app/anexos/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/anexos/page.tsx)
+- **Página GTFS**: [app/anexos/gtfs/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/anexos/gtfs/page.tsx)
 - **Esquemas GTFS**: [Esquema de archivos GTFS/](https://github.com/0KevinB/TIC-TransiLoja/tree/main/anexos/Esquema%20de%20archivos%20GTFS)
 - **Datos OSM**: [Estructura de datos exportados (OSM).geojson](https://github.com/0KevinB/TIC-TransiLoja/blob/main/anexos/Estructura%20de%20datos%20exportados%20(OSM).geojson)
-- **Visor de Esquemas**: [Esquemas-Datos.html](https://github.com/0KevinB/TIC-TransiLoja/blob/main/anexos/Esquemas-Datos.html)
+- **Visor Local**: [Esquemas-Datos.html](https://github.com/0KevinB/TIC-TransiLoja/blob/main/anexos/Esquemas-Datos.html)
 
 ---
 
@@ -255,9 +242,10 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 **Prioridad**: Alta | **Duración**: 1 semana
 
 #### 📁 Código Fuente (Móvil)
-- **Pantalla Principal con Buses**: [index.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/(tabs)/index.tsx)
+- **Pantalla de Mapa con Buses en Vivo**: [map.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/map.tsx)
 - **Pantalla de Buses**: [buses.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/buses.tsx)
 - **Hook de Buses en Vivo**: [useLiveBuses.ts](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/hooks/useLiveBuses.ts)
+- **Pantalla Principal (Home)**: [index.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/App-Movil/app/(tabs)/index.tsx)
 
 #### 📁 Código Fuente (Web)
 - **Página de Buses en Vivo**: [live-buses/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/dashboard/live-buses/page.tsx)
@@ -293,10 +281,8 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 - **Carpeta de Anexos**: [anexos/](https://github.com/0KevinB/TIC-TransiLoja/tree/main/anexos)
 - **Resultados Web**: [anexos/Web-Resultados/](https://github.com/0KevinB/TIC-TransiLoja/tree/main/anexos/Web-Resultados)
 - **Resultados Móvil**: [anexos/App-Movil-Resultados/](https://github.com/0KevinB/TIC-TransiLoja/tree/main/anexos/App-Movil-Resultados)
-- **Página de Anexos**: [app/anexos/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/anexos/page.tsx)
 - **Diagrama C4**: [app/anexos/diagrama-c4/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/anexos/diagrama-c4/page.tsx)
 - **Esquema de Pruebas**: [app/anexos/esquema-pruebas/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/anexos/esquema-pruebas/page.tsx)
-- **GTFS**: [app/anexos/gtfs/page.tsx](https://github.com/0KevinB/TIC-TransiLoja/blob/main/Web/app/anexos/gtfs/page.tsx)
 
 ### Código Completo por Plataforma
 - **Aplicación Web**: [Web/](https://github.com/0KevinB/TIC-TransiLoja/tree/main/Web)
@@ -313,10 +299,13 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 ## 📝 Notas Importantes
 
 > [!IMPORTANT]
-> Este repositorio contiene todo el código de los 16 sprints en la rama `main`. Los enlaces apuntan a archivos y carpetas específicas donde se encuentra implementada cada funcionalidad.
+> Este repositorio contiene todo el código de los 15 sprints en la rama `main`. Los enlaces apuntan a archivos y carpetas específicas donde se encuentra implementada cada funcionalidad. El Sprint 0 no está incluido ya que corresponde únicamente a diseño y documentación inicial.
 
 > [!NOTE]
-> Algunos archivos pueden contener código de múltiples sprints, ya que las funcionalidades se fueron expandiendo y mejorando a lo largo del proyecto.
+> - **Sprint 8**: Se enfoca exclusivamente en la planificación de viajes del usuario mediante el algoritmo RAPTOR en la aplicación móvil.
+> - **Sprint 11**: Incluye tanto la gestión de viajes y buses como la gestión de conductores y asignaciones.
+> - **Sprint 12**: El visor de esquemas de datos está disponible en línea en https://transi-loja.vercel.app/Esquemas-Datos.html
+> - **Sprint 15**: La visualización de buses en tiempo real se implementa principalmente en `map.tsx` usando el hook `useLiveBuses`.
 
 > [!WARNING]
 > El repositorio es de demostración. Ciertas credenciales y archivos sensibles han sido excluidos por motivos de seguridad (ver [SECURITY.md](https://github.com/0KevinB/TIC-TransiLoja/blob/main/SECURITY.md)).
@@ -324,5 +313,5 @@ Este documento proporciona los enlaces directos al código fuente en GitHub para
 ---
 
 **Última actualización**: Enero 2026  
-**Versión**: 2.0  
+**Versión**: 3.0  
 **Nota**: Todos los enlaces han sido verificados contra la estructura real del repositorio.
