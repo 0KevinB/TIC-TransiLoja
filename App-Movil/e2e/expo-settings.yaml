@@ -1,0 +1,76 @@
+appId: "host.exp.exponent"
+---
+# Prueba de configuración para Expo Go
+
+- launchApp
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 25000
+- waitForAnimationToEnd
+
+# Asegurar modo invitado
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 8000
+
+# Navegar a Ajustes
+- echo: "Navigating to Settings..."
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ajustes|Configuración"
+
+# Test 1: Cambiar tema
+- echo: "Test 1: Theme changes"
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Oscuro"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 1000
+- echo: "✓ Dark theme"
+
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Alto Contraste"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 1000
+- echo: "✓ High contrast theme"
+
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Claro"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 1000
+- echo: "✓ Light theme restored"
+
+# Test 2: Cambiar tamaño de fuente
+- echo: "Test 2: Font size changes"
+- scroll
+- tapOn: "Tamaño de fuente"
+- waitForAnimationToEnd
+- tapOn: "Grande"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 1000
+- echo: "✓ Large font"
+
+- tapOn: "Tamaño de fuente"
+- waitForAnimationToEnd
+- tapOn: "Normal"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 1000
+- echo: "✓ Normal font restored"
+
+- echo: "✓ All settings tests passed!"

@@ -1,0 +1,5 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+ROUTE_L5,SITU,L5,Linea 5 - Colinas Lojanas - El Paraiso,Ruta urbana que conecta Colinas Lojanas con El Paraiso,3,,20FEC6,FFFFFF
+ROUTE_L2,SITU,L2,Linea 2 - Centro - Argelia,Ruta urbana Centro - Argelia,3,,FF5722,FFFFFF
+ROUTE_L7,SITU,L7,Linea 7,Ruta urbana Línea 7,3,,4CAF50,FFFFFF
+ROUTE_L12,SITU,L12,Linea 12,Ruta urbana Línea 12,3,,9C27B0,FFFFFF

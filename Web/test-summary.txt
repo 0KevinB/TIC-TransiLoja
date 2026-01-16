@@ -1,0 +1,332 @@
+
+> my-v0-project@0.1.0 test
+> jest
+
+PASS __tests__/unit/utils.test.ts
+PASS __tests__/lib/utils.test.ts
+PASS __tests__/performance/algorithms.test.ts
+  ● Console
+
+    console.log
+      ⏱️ Conversión segundos → GTFS time:
+
+      at Object.log (__tests__/performance/algorithms.test.ts:43:35)
+
+    console.log
+         Total: 19.20ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:44:35)
+
+    console.log
+         Promedio: 0.0019ms por operación
+
+      at Object.log (__tests__/performance/algorithms.test.ts:45:35)
+
+    console.log
+         Iteraciones: 10000
+
+      at Object.log (__tests__/performance/algorithms.test.ts:46:35)
+
+    console.log
+      ⏱️ Conversión GTFS time → segundos:
+
+      at Object.log (__tests__/performance/algorithms.test.ts:66:35)
+
+    console.log
+         Total: 17.32ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:67:35)
+
+    console.log
+         Promedio: 0.0017ms por operación
+
+      at Object.log (__tests__/performance/algorithms.test.ts:68:35)
+
+    console.log
+      ⏱️ Cálculo de duraciones:
+
+      at Object.log (__tests__/performance/algorithms.test.ts:86:35)
+
+    console.log
+         Total: 36.54ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:87:35)
+
+    console.log
+         Promedio: 0.0037ms por operación
+
+      at Object.log (__tests__/performance/algorithms.test.ts:88:35)
+
+    console.log
+      🔍 Búsqueda en 1000 paradas: 0.41ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:116:35)
+
+    console.log
+      🔍 Filtrado de 5000 rutas: 0.44ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:135:35)
+
+    console.log
+         Resultados: 1667
+
+      at Object.log (__tests__/performance/algorithms.test.ts:136:35)
+
+    console.log
+      🔢 Ordenamiento de 1000 elementos: 1.17ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:152:35)
+
+    console.log
+      🌍 Cálculo distancia Haversine:
+
+      at Object.log (__tests__/performance/algorithms.test.ts:200:35)
+
+    console.log
+         Total: 49.94ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:201:35)
+
+    console.log
+         Promedio: 0.0050ms por cálculo
+
+      at Object.log (__tests__/performance/algorithms.test.ts:202:35)
+
+    console.log
+         Iteraciones: 10000
+
+      at Object.log (__tests__/performance/algorithms.test.ts:203:35)
+
+    console.log
+      📍 Búsqueda parada más cercana (1000 paradas):
+
+      at Object.log (__tests__/performance/algorithms.test.ts:238:35)
+
+    console.log
+         Tiempo: 7.55ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:239:35)
+
+    console.log
+         Parada encontrada: Parada 312
+
+      at Object.log (__tests__/performance/algorithms.test.ts:240:35)
+
+    console.log
+      📊 Procesamiento de 10,000 stop_times:
+
+      at Object.log (__tests__/performance/algorithms.test.ts:274:35)
+
+    console.log
+         Tiempo: 10.70ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:275:35)
+
+    console.log
+         Viajes únicos: 500
+
+      at Object.log (__tests__/performance/algorithms.test.ts:276:35)
+
+    console.log
+      📈 Generación de reporte (1000 viajes):
+
+      at Object.log (__tests__/performance/algorithms.test.ts:314:35)
+
+    console.log
+         Tiempo: 0.97ms
+
+      at Object.log (__tests__/performance/algorithms.test.ts:315:35)
+
+    console.log
+         Rutas: 50
+
+      at Object.log (__tests__/performance/algorithms.test.ts:316:35)
+
+    console.log
+      💾 Uso de memoria (array de 100k elementos):
+
+      at Object.log (__tests__/performance/algorithms.test.ts:345:35)
+
+    console.log
+         Inicial: 0.00MB
+
+      at Object.log (__tests__/performance/algorithms.test.ts:346:35)
+
+    console.log
+         Final: 0.00MB
+
+      at Object.log (__tests__/performance/algorithms.test.ts:347:35)
+
+    console.log
+         Usado: 0.00MB
+
+      at Object.log (__tests__/performance/algorithms.test.ts:348:35)
+
+    console.log
+         Resultados: 50000 elementos
+
+      at Object.log (__tests__/performance/algorithms.test.ts:349:35)
+
+PASS __tests__/components/Input.test.tsx (5.39 s)
+PASS __tests__/components/Card.test.tsx (5.427 s)
+PASS __tests__/components/Table.test.tsx (5.471 s)
+FAIL __tests__/components/Checkbox.test.tsx
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    C:\Users\kevin\Documents\Github\TransiLoja\Web\node_modules\lucide-react\dist\esm\icons\check.js:8
+    import createLucideIcon from '../createLucideIcon.js';
+    ^^^^^^
+
+    SyntaxError: Cannot use import statement outside a module
+
+    [0m [90m 13 |[39m   [33m<[39m[33mCheckboxPrimitive[39m[33m.[39m[33mRoot[39m
+     [90m 14 |[39m     ref[33m=[39m{ref}
+    [31m[1m>[22m[39m[90m 15 |[39m     className[33m=[39m{cn(
+     [90m    |[39m                [31m[1m^[22m[39m
+     [90m 16 |[39m       [32m"peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"[39m[33m,[39m
+     [90m 17 |[39m       className
+     [90m 18 |[39m     )}[0m
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+      at Object.<anonymous> (components/ui/checkbox.tsx:15:16)
+      at Object.<anonymous> (__tests__/components/Checkbox.test.tsx:7:19)
+
+PASS __tests__/components/Badge.test.tsx (5.657 s)
+PASS __tests__/components/Textarea.test.tsx (5.507 s)
+PASS __tests__/components/Button.test.tsx (5.542 s)
+PASS __tests__/components/Label.test.tsx (5.615 s)
+PASS __tests__/components/Switch.test.tsx (6.175 s)
+FAIL __tests__/components/Select.test.tsx
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    C:\Users\kevin\Documents\Github\TransiLoja\Web\node_modules\lucide-react\dist\esm\icons\check.js:8
+    import createLucideIcon from '../createLucideIcon.js';
+    ^^^^^^
+
+    SyntaxError: Cannot use import statement outside a module
+
+    [0m [90m 45 |[39m     {[33m...[39mprops}
+     [90m 46 |[39m   [33m>[39m
+    [31m[1m>[22m[39m[90m 47 |[39m     [33m<[39m[33mChevronUp[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+     [90m    |[39m                [31m[1m^[22m[39m
+     [90m 48 |[39m   [33m<[39m[33m/[39m[33mSelectPrimitive[39m[33m.[39m[33mScrollUpButton[39m[33m>[39m
+     [90m 49 |[39m ))
+     [90m 50 |[39m [33mSelectScrollUpButton[39m[33m.[39mdisplayName [33m=[39m [33mSelectPrimitive[39m[33m.[39m[33mScrollUpButton[39m[33m.[39mdisplayName[0m
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+      at Object.<anonymous> (components/ui/select.tsx:47:16)
+      at Object.<anonymous> (__tests__/components/Select.test.tsx:7:17)
+
+FAIL __tests__/components/Dialog.test.tsx
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    C:\Users\kevin\Documents\Github\TransiLoja\Web\node_modules\lucide-react\dist\esm\icons\x.js:8
+    import createLucideIcon from '../createLucideIcon.js';
+    ^^^^^^
+
+    SyntaxError: Cannot use import statement outside a module
+
+    [0m [90m 45 |[39m     [33m>[39m
+     [90m 46 |[39m       {children}
+    [31m[1m>[22m[39m[90m 47 |[39m       [33m<[39m[33mDialogPrimitive[39m[33m.[39m[33mClose[39m className[33m=[39m[32m"absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground"[39m[33m>[39m
+     [90m    |[39m            [31m[1m^[22m[39m
+     [90m 48 |[39m         [33m<[39m[33mX[39m className[33m=[39m[32m"h-4 w-4"[39m [33m/[39m[33m>[39m
+     [90m 49 |[39m         [33m<[39m[33mspan[39m className[33m=[39m[32m"sr-only"[39m[33m>[39m[33mClose[39m[33m<[39m[33m/[39m[33mspan[39m[33m>[39m
+     [90m 50 |[39m       [33m<[39m[33m/[39m[33mDialogPrimitive[39m[33m.[39m[33mClose[39m[33m>[39m[0m
+
+      at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1505:14)
+      at Object.<anonymous> (components/ui/dialog.tsx:47:12)
+      at Object.<anonymous> (__tests__/components/Dialog.test.tsx:7:17)
+
+FAIL __tests__/hooks/useAuth.test.tsx (153.367 s)
+  ● useAuth Hook › should initialize and provide auth context
+
+    thrown: "Exceeded timeout of 5000 ms for a test.
+    Add a timeout value to this test to increase the timeout, if this is a long-running test. See https://jestjs.io/docs/api#testname-fn-timeout."
+
+    [0m [90m 13 |[39m   })
+     [90m 14 |[39m
+    [31m[1m>[22m[39m[90m 15 |[39m   it([32m'should initialize and provide auth context'[39m[33m,[39m [36masync[39m () [33m=>[39m {
+     [90m    |[39m   [31m[1m^[22m[39m
+     [90m 16 |[39m     jest[33m.[39museFakeTimers()
+     [90m 17 |[39m     [36mconst[39m { result } [33m=[39m renderHook(() [33m=>[39m useAuth()[33m,[39m { wrapper })
+     [90m 18 |[39m[0m
+
+      at it (__tests__/hooks/useAuth.test.tsx:15:3)
+      at Object.describe (__tests__/hooks/useAuth.test.tsx:10:1)
+
+PASS __tests__/lib/firebase.test.ts
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+[32mjest-html-reporter >> Report generated (Resultados/Jest/report.html)[0m
+
+Test Suites: 4 failed, 12 passed, 16 total
+Tests:       1 failed, 67 passed, 68 total
+Snapshots:   0 total
+Time:        163.023 s
+Ran all test suites.

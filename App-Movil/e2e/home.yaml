@@ -1,0 +1,107 @@
+appId: com.transiloja.app
+---
+# Limpiar estado y lanzar app
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+
+# Login como invitado (si estamos en pantalla de login)
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 5000
+
+# Verificar que estamos en home
+- assertVisible: "Ver Mapa|Planificar Viaje"
+
+# Test 1: Verificar todas las acciones rápidas están visibles
+- assertVisible: "Ver Mapa"
+- assertVisible: "Planificar Viaje"
+- assertVisible: "Rutas"
+- assertVisible: "Paradas"
+- assertVisible: "Horarios"
+- assertVisible: "En Vivo"
+
+# Test 2: Verificar indicador de modo invitado
+- assertVisible: "Modo Invitado"
+
+# Test 3: Verificar mensaje de bienvenida
+- assertVisible: "Nos alegra verte"
+
+# Test 4: Pull to refresh
+- scroll
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+
+# Test 5: Interactuar con cada acción rápida
+
+# Acción: Ver Mapa
+- tapOn: "Ver Mapa"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+- waitForAnimationToEnd
+- back
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+
+# Acción: Planificar Viaje
+- tapOn: "Planificar Viaje"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+- waitForAnimationToEnd
+- back
+- waitForAnimationToEnd
+- assertVisible: "Planificar Viaje"
+
+# Acción: Rutas
+- scroll
+    startPercentage: 70
+- tapOn: "Rutas"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+- waitForAnimationToEnd
+- back
+- waitForAnimationToEnd
+
+# Acción: Paradas
+- tapOn: "Paradas"
+- extendedWaitUntil:
+    visible: "Buscar parada"
+    timeout: 5000
+- back
+- waitForAnimationToEnd
+
+# Acción: Horarios
+- scroll
+    startPercentage: 70
+- tapOn: "Horarios"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+- waitForAnimationToEnd
+- back
+- waitForAnimationToEnd
+
+# Acción: En Vivo
+- tapOn: "En Vivo"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+- waitForAnimationToEnd
+- back
+- waitForAnimationToEnd
+
+# Test 6: Verificar que seguimos en home
+- assertVisible: "Ver Mapa"
+- assertVisible: "Planificar Viaje"

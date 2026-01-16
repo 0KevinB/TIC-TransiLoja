@@ -1,0 +1,94 @@
+appId: com.transiloja.app
+---
+# Limpiar estado y lanzar app
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+
+# Login como invitado (si estamos en pantalla de login)
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 5000
+
+# Verificar que estamos en home
+- assertVisible: "Ver Mapa|Planificar Viaje"
+
+# Test 1: Navegación por todas las tabs principales
+- assertVisible: "Inicio"
+
+# Navegar a Alertas
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas|Lista de alertas de transporte"
+
+# Navegar a Servicio
+- tapOn:
+    text: "Servicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Servicio"
+
+# Navegar a Favoritos
+- tapOn:
+    text: "Favoritos"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Favoritos"
+
+# Navegar a Ajustes
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ajustes|Configuración"
+
+# Regresar a Inicio
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+- assertVisible: "Planificar Viaje"
+
+# Test 2: Navegación a pantallas específicas desde home
+- tapOn: "Ver Mapa"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+- waitForAnimationToEnd
+- back
+- waitForAnimationToEnd
+
+# Navegar a Paradas
+- tapOn: "Paradas"
+- extendedWaitUntil:
+    visible: "Paradas|Buscar parada"
+    timeout: 5000
+- assertVisible: "Buscar parada"
+- back
+- waitForAnimationToEnd
+
+# Navegar a Horarios
+- tapOn: "Horarios"
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 5000
+- waitForAnimationToEnd
+- back
+- waitForAnimationToEnd
+
+# Test 3: Verificar que volvemos al home
+- assertVisible: "Ver Mapa"
+- assertVisible: "Planificar Viaje"
+- assertVisible: "Rutas"

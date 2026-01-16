@@ -1,0 +1,86 @@
+# === FLUTTER ===
+**/build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+android/.gradle/
+android/captures/
+ios/Pods/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+macos/Pods/
+macos/Flutter/Flutter.framework
+macos/Flutter/Flutter.podspec
+windows/Flutter/ephemeral/
+linux/flutter/ephemeral/
+*.iml
+*.lock
+*.log
+.idea/
+.vscode/
+*.swp
+
+# Archivos temporales de Firebase dentro de Flutter
+firebase.json
+.firebase/
+firestore.indexes.json
+firestore.rules
+storage.rules
+
+# === NEXT.JS ===
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*         # para variables de entorno
+.env.local     # variables de entorno locales
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# === FIREBASE (general) ===
+.firebase/
+.firebasehosting.*
+firestore.indexes.json
+firestore.rules
+storage.rules
+*.secret.*
+
+
+# === EDITORES ===
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+.idea/
+*.vscode/
+*.sw?
+
+# === BUILD OUTPUT (general) ===
+dist/
+build/
+coverage/
+Resultados/
+Web/Resultados/
+App-Movil/Resultados/
+*.pdf
+*.html
+
+.claude/
+claude.*
+firebase-export-CORREGIDO.json
+firebase-export-2025-09-26T22-24-14-644Z.json
+export (1).geojson
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+
+# Archivos sensibles de Firebase
+App-Movil/android/google-services.json
+App-Movil/android/app/google-services.json

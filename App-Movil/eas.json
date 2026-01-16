@@ -1,0 +1,71 @@
+{
+  "cli": {
+    "version": ">= 13.2.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assembleDebug",
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "development",
+        "EXPO_PUBLIC_PROJECT_ID": "cea6d837-92cb-4ffb-83d6-76c84ae6be1c"
+      },
+      "node": "20.18.0",
+      "cache": {
+        "disabled": true
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "preview",
+        "EXPO_PUBLIC_ACCENT_COLOR": "#FFD700",
+        "EXPO_PUBLIC_MUNICIPALITY_NAME": "Loja",
+        "EXPO_PUBLIC_PRIMARY_COLOR": "#00C851",
+        "EXPO_PUBLIC_SECONDARY_COLOR": "#FF4444",
+        "EXPO_PUBLIC_PROJECT_ID": "cea6d837-92cb-4ffb-83d6-76c84ae6be1c"
+      },
+      "node": "20.18.0",
+      "cache": {
+        "disabled": true
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "production",
+        "EXPO_PUBLIC_PROJECT_ID": "cea6d837-92cb-4ffb-83d6-76c84ae6be1c"
+      },
+      "node": "20.18.0",
+      "cache": {
+        "disabled": true
+      }
+    },
+    "production-aab": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "production",
+        "EXPO_PUBLIC_PROJECT_ID": "cea6d837-92cb-4ffb-83d6-76c84ae6be1c"
+      },
+      "node": "20.18.0",
+      "cache": {
+        "disabled": true
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

@@ -1,0 +1,4 @@
+fare_id,price,currency_type,payment_method,transfers,transfer_duration,agency_id
+FARE_REGULAR,0.30,USD,0,0,,SITU
+FARE_STUDENT,0.15,USD,0,0,,SITU
+FARE_PREFERENCIAL,0.15,USD,0,0,,SITU

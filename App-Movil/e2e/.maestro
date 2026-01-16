@@ -1,0 +1,4 @@
+# Configuración de Maestro para TransiLoja
+
+# Carpeta de salida para resultados
+output: ../Resultados/Maestro

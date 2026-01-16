@@ -1,0 +1,96 @@
+appId: com.transiloja.app
+---
+# Limpiar estado y lanzar app
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+
+# Login como invitado (si estamos en pantalla de login)
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 5000
+
+# Verificar que estamos en home
+- assertVisible: "Ver Mapa|Planificar Viaje"
+
+# Test 1: Navegar a Paradas desde home
+- tapOn: "Paradas"
+- extendedWaitUntil:
+    visible: "Paradas|Buscar parada"
+    timeout: 5000
+
+# Test 2: Verificar elementos principales de la pantalla
+- assertVisible: "Buscar parada"
+
+# Test 3: Buscar parada por texto
+- tapOn: "Buscar parada por nombre o código..."
+- inputText: "Terminal"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 4: Limpiar búsqueda
+- clearText
+- waitForAnimationToEnd
+
+# Test 5: Buscar otra parada
+- tapOn: "Buscar parada por nombre o código..."
+- inputText: "San"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 6: Verificar que aparezcan resultados
+# (Si hay paradas con "San" en el nombre)
+- runFlow:
+    when:
+      visible:
+        pattern: ".*"
+        below:
+          text: "Buscar parada"
+    commands:
+      # Tap en la primera parada de resultados
+      - tapOn:
+          index: 0
+          below:
+            text: "Buscar parada"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 3000
+      - waitForAnimationToEnd
+      # Volver atrás
+      - back
+      - waitForAnimationToEnd
+
+# Test 7: Limpiar búsqueda nuevamente
+- clearText
+- waitForAnimationToEnd
+
+# Test 8: Verificar filtro de "Cercanas"
+- runFlow:
+    when:
+      visible: "Cercanas"
+    commands:
+      - tapOn: "Cercanas"
+      - waitForAnimationToEnd
+      - wait:
+          milliseconds: 1000
+
+# Test 9: Scroll en la lista de paradas
+- scroll
+- waitForAnimationToEnd
+
+# Test 10: Volver al home
+- back
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+- assertVisible: "Planificar Viaje"

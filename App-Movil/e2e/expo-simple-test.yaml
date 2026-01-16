@@ -1,0 +1,31 @@
+appId: "host.exp.exponent"
+---
+# Prueba simple para Expo Go
+# IMPORTANTE:
+# 1. La app debe estar ABIERTA en Expo Go antes de ejecutar esta prueba
+# 2. Servidor Expo debe estar corriendo (npx expo start)
+
+# Verificar que la app está visible
+- assertVisible: ".*"
+
+# Verificar que estamos en TransiLoja
+- assertVisible: "Ver Mapa|Planificar Viaje"
+- echo: "✓ App loaded successfully"
+
+# Test básico de navegación
+- echo: "Testing tab navigation..."
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas"
+- echo: "✓ Alertas tab OK"
+
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+- echo: "✓ Home tab OK"
+
+- echo: "✅ Test completed successfully!"

@@ -1,0 +1,7 @@
+route_id,service_id,trip_id,trip_headsign,trip_short_name,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+ROUTE_L5,ALLDAYS,TRIP_L5_001,Terminal,L5-1,0,BLOCK_1,SHAPE_L5,1,1
+ROUTE_L5,ALLDAYS,TRIP_L5_002,Colinas Lojanas,L5-2,1,BLOCK_1,SHAPE_L5_REV,1,1
+ROUTE_L2,WEEKDAY,TRIP_L2_001,Argelia,L2-1,0,BLOCK_2,SHAPE_L2,1,0
+ROUTE_L2,WEEKDAY,TRIP_L2_002,Centro,L2-2,1,BLOCK_2,SHAPE_L2_REV,1,0
+ROUTE_L7,WEEKDAY,TRIP_L7_001,Terminal,L7-1,0,BLOCK_3,SHAPE_L7,1,1
+ROUTE_L12,ALLDAYS,TRIP_L12_001,Terminal,L12-1,0,BLOCK_4,SHAPE_L12,1,1

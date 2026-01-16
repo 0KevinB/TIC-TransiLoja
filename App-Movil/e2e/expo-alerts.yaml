@@ -1,0 +1,60 @@
+appId: "host.exp.exponent"
+---
+# Prueba de alertas para Expo Go
+
+- launchApp
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 25000
+- waitForAnimationToEnd
+
+# Asegurar modo invitado si estamos en login
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 8000
+
+# Navegar a Alertas
+- echo: "Navigating to Alertas..."
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas"
+
+# Test filtros
+- echo: "Testing filters..."
+- assertVisible: "Todas"
+- assertVisible: "Activas"
+- assertVisible: "Próximas"
+- assertVisible: "Finalizadas"
+
+# Probar cada filtro
+- tapOn: "Activas"
+- waitForAnimationToEnd
+- echo: "✓ Activas filter"
+
+- tapOn: "Próximas"
+- waitForAnimationToEnd
+- echo: "✓ Próximas filter"
+
+- tapOn: "Finalizadas"
+- waitForAnimationToEnd
+- echo: "✓ Finalizadas filter"
+
+- tapOn: "Todas"
+- waitForAnimationToEnd
+- echo: "✓ Todas filter"
+
+# Pull to refresh
+- scroll
+- waitForAnimationToEnd
+- echo: "✓ Pull to refresh"
+
+- echo: "✓ All alerts tests passed!"

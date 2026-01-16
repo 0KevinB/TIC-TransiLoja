@@ -1,0 +1,104 @@
+appId: com.transiloja.app
+---
+# Limpiar estado y lanzar app
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+
+# Login como invitado (si estamos en pantalla de login)
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 5000
+
+# Verificar que estamos en home
+- assertVisible: "Ver Mapa|Planificar Viaje"
+
+# Test 1: Navegar a Configuración
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ajustes|Configuración"
+
+# Test 2: Verificar que muestra modo invitado
+- assertVisible: "Invitado"
+- assertVisible: "Iniciar Sesión"
+
+# Test 3: Verificar opciones de configuración
+- assertVisible: "Tema"
+- scroll
+- assertVisible: "Tamaño de fuente"
+- assertVisible: "Acerca de TransiLoja"
+
+# Test 4: Cambiar tema a Oscuro
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Oscuro"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 5: Cambiar tema a Alto Contraste
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Alto Contraste"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 6: Volver a tema Claro
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Claro"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 7: Cambiar tamaño de fuente a Grande
+- scroll
+- tapOn: "Tamaño de fuente"
+- waitForAnimationToEnd
+- tapOn: "Grande"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 8: Cambiar tamaño de fuente a Muy Grande
+- tapOn: "Tamaño de fuente"
+- waitForAnimationToEnd
+- tapOn: "Muy Grande"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 9: Volver a tamaño Normal
+- tapOn: "Tamaño de fuente"
+- waitForAnimationToEnd
+- tapOn: "Normal"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Test 10: Ver información "Acerca de"
+- scroll
+- tapOn: "Acerca de TransiLoja"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 1000
+
+# Test 11: Volver a home
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+- assertVisible: "Planificar Viaje"

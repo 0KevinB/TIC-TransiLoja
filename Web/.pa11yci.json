@@ -1,0 +1,55 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 30000,
+    "wait": 2000,
+    "chromeLaunchConfig": {
+      "args": [
+        "--no-sandbox",
+        "--disable-setuid-sandbox"
+      ]
+    },
+    "ignore": [
+      "notice"
+    ],
+    "runners": [
+      "axe",
+      "htmlcs"
+    ],
+    "screenCapture": "Web/cypress/screenshots/a11y"
+  },
+  "urls": [
+    {
+      "url": "http://localhost:3003",
+      "screenCapture": "Web/cypress/screenshots/a11y/home.png"
+    },
+    {
+      "url": "http://localhost:3003/dashboard",
+      "screenCapture": "Web/cypress/screenshots/a11y/dashboard.png"
+    },
+    {
+      "url": "http://localhost:3003/paradas",
+      "screenCapture": "Web/cypress/screenshots/a11y/paradas.png"
+    },
+    {
+      "url": "http://localhost:3003/rutas",
+      "screenCapture": "Web/cypress/screenshots/a11y/rutas.png"
+    },
+    {
+      "url": "http://localhost:3003/buses",
+      "screenCapture": "Web/cypress/screenshots/a11y/buses.png"
+    },
+    {
+      "url": "http://localhost:3003/conductores",
+      "screenCapture": "Web/cypress/screenshots/a11y/conductores.png"
+    },
+    {
+      "url": "http://localhost:3003/viajes",
+      "screenCapture": "Web/cypress/screenshots/a11y/viajes.png"
+    },
+    {
+      "url": "http://localhost:3003/alertas",
+      "screenCapture": "Web/cypress/screenshots/a11y/alertas.png"
+    }
+  ]
+}

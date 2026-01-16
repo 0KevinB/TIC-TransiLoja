@@ -1,0 +1,174 @@
+appId: com.transiloja.app
+---
+# Suite completa de pruebas E2E para TransiLoja
+# Este flujo ejecuta todas las pruebas en secuencia
+
+# ========================================
+# 1. PRUEBAS DE AUTENTICACIÓN
+# ========================================
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 15000
+
+# Login con credenciales válidas
+- tapOn: "Correo electrónico"
+- inputText: "carolalvaradojime@gmail.com"
+- tapOn: "Contraseña"
+- inputText: "123456"
+- hideKeyboard
+- waitForAnimationToEnd
+- tapOn:
+    id: "login-submit-button"
+- extendedWaitUntil:
+    visible: "Inicio|Alertas"
+    timeout: 8000
+
+# ========================================
+# 2. PRUEBAS DE HOME SCREEN
+# ========================================
+- assertVisible: "Inicio"
+- assertVisible: "Alertas"
+- assertVisible: "Favoritos"
+- assertVisible: "Ajustes"
+
+# Pull to refresh
+- scroll
+- waitForAnimationToEnd
+
+# ========================================
+# 3. PRUEBAS DE NAVEGACIÓN
+# ========================================
+
+# Navegar a Alertas
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas|Todas"
+
+# Navegar a Servicio
+- tapOn:
+    text: "Servicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Servicio"
+
+# Navegar a Favoritos
+- tapOn:
+    text: "Favoritos"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Favoritos"
+
+# Navegar a Ajustes
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ajustes|Configuración"
+
+# Volver a Inicio
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+
+# ========================================
+# 4. PRUEBAS DE PARADAS
+# ========================================
+- tapOn: "Paradas"
+- extendedWaitUntil:
+    visible: "Buscar parada"
+    timeout: 5000
+
+# Buscar parada
+- tapOn: "Buscar parada por nombre o código..."
+- inputText: "Terminal"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+- clearText
+- back
+- waitForAnimationToEnd
+
+# ========================================
+# 5. PRUEBAS DE ALERTAS
+# ========================================
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+
+# Probar filtros
+- tapOn: "Activas"
+- waitForAnimationToEnd
+- tapOn: "Próximas"
+- waitForAnimationToEnd
+- tapOn: "Todas"
+- waitForAnimationToEnd
+
+# ========================================
+# 6. PRUEBAS DE CONFIGURACIÓN
+# ========================================
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+
+# Cambiar tema
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Oscuro"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Claro"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+# Cambiar tamaño de fuente
+- scroll
+- tapOn: "Tamaño de fuente"
+- waitForAnimationToEnd
+- tapOn: "Grande"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+
+- tapOn: "Tamaño de fuente"
+- waitForAnimationToEnd
+- tapOn: "Normal"
+- waitForAnimationToEnd
+
+# ========================================
+# 7. LOGOUT
+# ========================================
+- tapOn:
+    id: "logout-button"
+- extendedWaitUntil:
+    visible: "¿Estás seguro"
+    timeout: 3000
+- tapOn: "Cerrar Sesión"
+- extendedWaitUntil:
+    visible: "TransiLoja"
+    timeout: 5000
+
+# ========================================
+# 8. MODO INVITADO
+# ========================================
+- tapOn:
+    id: "guest-access-button"
+- extendedWaitUntil:
+    visible: "Inicio|Alertas"
+    timeout: 5000
+- assertVisible: "Ver Mapa"
+- assertVisible: "Planificar Viaje"
+
+# FIN DE LA SUITE COMPLETA

@@ -1,0 +1,84 @@
+appId: "host.exp.exponent"
+---
+# Prueba de navegación para Expo Go
+
+- launchApp
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 25000
+- waitForAnimationToEnd
+
+# Asegurar que estamos en home
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 8000
+
+# Verificar que estamos en home
+- assertVisible: "Ver Mapa|Planificar Viaje"
+
+# Test 1: Navegación por tabs principales
+- echo: "Test 1: Tab navigation"
+
+# Alertas
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas"
+- echo: "✓ Alertas tab"
+
+# Servicio
+- tapOn:
+    text: "Servicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Servicio"
+- echo: "✓ Servicio tab"
+
+# Favoritos
+- tapOn:
+    text: "Favoritos"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Favoritos"
+- echo: "✓ Favoritos tab"
+
+# Ajustes
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ajustes|Configuración"
+- echo: "✓ Ajustes tab"
+
+# Volver a Inicio
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+- echo: "✓ Back to Inicio"
+
+# Test 2: Navegación a pantallas
+- echo: "Test 2: Screen navigation"
+
+# Paradas
+- tapOn: "Paradas"
+- extendedWaitUntil:
+    visible: "Buscar parada"
+    timeout: 5000
+- back
+- waitForAnimationToEnd
+- echo: "✓ Paradas screen"
+
+# Verificar regreso a home
+- assertVisible: "Ver Mapa"
+
+- echo: "✓ All navigation tests passed!"

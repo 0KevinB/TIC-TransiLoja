@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="213" failures="23" errors="0" time="8.577">
+  <testsuite name="Creación de Viajes - Integración Completa" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:07" time="3.144" tests="16">
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-01: Planificación de Viaje" name="debe crear un viaje con múltiples segmentos" time="0.04">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-01: Planificación de Viaje" name="debe calcular duración total del viaje" time="0">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-01: Planificación de Viaje" name="debe calcular número de transbordos" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-01: Planificación de Viaje" name="debe identificar líneas de bus necesarias" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-02: Inicio de Viaje" name="debe cambiar estado a &quot;en_progreso&quot;" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-02: Inicio de Viaje" name="debe registrar hora de inicio" time="0.002">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-02: Inicio de Viaje" name="debe activar tracking de ubicación" time="0">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-03: Progreso del Viaje" name="debe marcar segmentos como completados" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-03: Progreso del Viaje" name="debe calcular segmento actual" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-03: Progreso del Viaje" name="debe notificar próxima acción al usuario" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-04: Finalización del Viaje" name="debe cambiar estado a &quot;completado&quot;" time="0">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-04: Finalización del Viaje" name="debe guardar en historial" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-04: Finalización del Viaje" name="debe permitir calificar el viaje" time="0">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-05: Viajes Favoritos" name="debe guardar viaje como favorito" time="0.001">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-05: Viajes Favoritos" name="debe sugerir viajes frecuentes" time="0">
+    </testcase>
+    <testcase classname="Creación de Viajes - Integración Completa › MOB-INT-TRIP-06: Métricas de Viaje" name="debe calcular estadísticas del viaje" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="Location Utils - Funcionalidad" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:07" time="3.333" tests="8">
+    <testcase classname="Location Utils - Funcionalidad › Cálculo de Distancias" name="debe calcular distancia correcta entre dos puntos en Loja" time="0.013">
+    </testcase>
+    <testcase classname="Location Utils - Funcionalidad › Cálculo de Distancias" name="debe retornar 0 para el mismo punto" time="0.001">
+    </testcase>
+    <testcase classname="Location Utils - Funcionalidad › Cálculo de Distancias" name="debe calcular distancias mayores correctamente" time="0">
+    </testcase>
+    <testcase classname="Location Utils - Funcionalidad › Cálculo de Distancias" name="debe manejar coordenadas negativas correctamente" time="0">
+    </testcase>
+    <testcase classname="Location Utils - Funcionalidad › Validación de Coordenadas" name="debe validar coordenadas correctas" time="0.002">
+    </testcase>
+    <testcase classname="Location Utils - Funcionalidad › Validación de Coordenadas" name="debe rechazar coordenadas inválidas" time="0">
+    </testcase>
+    <testcase classname="Location Utils - Funcionalidad › Formato de Coordenadas" name="debe formatear coordenadas con precisión correcta" time="0.001">
+    </testcase>
+    <testcase classname="Location Utils - Funcionalidad › Formato de Coordenadas" name="debe redondear correctamente" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Modo Offline - Integración Completa" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:07" time="3.327" tests="14">
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-01: Caché de Rutas" name="debe guardar rutas buscadas en caché" time="0.014">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-01: Caché de Rutas" name="debe mantener historial de búsquedas offline" time="0.001">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-01: Caché de Rutas" name="debe limpiar caché antiguo (más de 7 días)" time="0.003">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-02: Detección de Conexión" name="debe detectar cuando la app está offline" time="0.001">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-02: Detección de Conexión" name="debe detectar reconexión" time="0.001">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-02: Detección de Conexión" name="debe agregar listener para cambios de conectividad" time="0">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-03: Sincronización al Reconectar" name="debe sincronizar acciones pendientes al reconectar" time="0">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-03: Sincronización al Reconectar" name="debe limpiar acciones sincronizadas" time="0">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-04: Paradas Cercanas Offline" name="debe cachear paradas cercanas" time="0.001">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-04: Paradas Cercanas Offline" name="debe ordenar paradas por distancia" time="0.001">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-05: Favoritos Offline" name="debe guardar rutas favoritas localmente" time="0">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-05: Favoritos Offline" name="debe agregar favorito sin conexión" time="0.001">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-06: Métricas de Rendimiento Offline" name="debe cargar datos cacheados en menos de 100ms" time="0.005">
+    </testcase>
+    <testcase classname="Modo Offline - Integración Completa › MOB-INT-OFF-06: Métricas de Rendimiento Offline" name="debe reportar tamaño de caché" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Disponibilidad - Firebase Crashlytics" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:11" time="0.901" tests="29">
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-01: Configuración de Crashlytics" name="debe verificar que Firebase Crashlytics está disponible" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-01: Configuración de Crashlytics" name="debe poder habilitar/deshabilitar collection" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-02: Registro de Errores No Fatales" name="debe registrar un error simple" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-02: Registro de Errores No Fatales" name="debe registrar error con contexto" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-02: Registro de Errores No Fatales" name="debe registrar múltiples tipos de errores" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-03: Logs y Contexto" name="debe registrar logs de actividad" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-03: Logs y Contexto" name="debe establecer ID de usuario" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-03: Logs y Contexto" name="debe establecer atributos personalizados" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-03: Logs y Contexto" name="debe establecer múltiples atributos a la vez" time="0.005">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-04: Contexto Personalizado" name="debe establecer contexto completo" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-04: Contexto Personalizado" name="debe registrar error con contexto completo" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-05: Reportes No Enviados" name="debe verificar reportes no enviados" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-05: Reportes No Enviados" name="debe poder enviar reportes no enviados" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-05: Reportes No Enviados" name="debe poder eliminar reportes no enviados" time="0.003">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-06: Disponibilidad de la App" name="debe registrar evento de inicio de app" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-06: Disponibilidad de la App" name="debe registrar eventos de ciclo de vida" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-06: Disponibilidad de la App" name="debe registrar fallo de evento" time="0.003">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-06: Disponibilidad de la App" name="debe monitorear disponibilidad general" time="0.003">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-07: Escenarios de Errores Comunes" name="debe manejar error de API" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-07: Escenarios de Errores Comunes" name="debe manejar error de GPS" time="0.003">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-07: Escenarios de Errores Comunes" name="debe manejar error de algoritmo RAPTOR" time="0.003">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-07: Escenarios de Errores Comunes" name="debe manejar error de caché" time="0.011">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-07: Escenarios de Errores Comunes" name="debe manejar error de permisos" time="0.003">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-08: Métricas de Disponibilidad" name="debe calcular tasa de crashes (simulación)" time="0.001">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-08: Métricas de Disponibilidad" name="debe rastrear uptime de la app" time="0.123">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-08: Métricas de Disponibilidad" name="debe rastrear errores por sesión" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-09: Integración con Flujo de Usuario" name="debe rastrear flujo completo de búsqueda de rutas" time="0.062">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-09: Integración con Flujo de Usuario" name="debe rastrear flujo con error" time="0.002">
+    </testcase>
+    <testcase classname="Disponibilidad - Firebase Crashlytics › MOB-CRASH-10: Reporte Final" name="debe generar reporte completo" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="GPS y Tracking - Integración Completa" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:07" time="4.262" tests="17">
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-01: Permisos de Ubicación" name="debe solicitar permisos de ubicación en primer plano" time="0.015">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-01: Permisos de Ubicación" name="debe solicitar permisos de ubicación en segundo plano (conductor)" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-01: Permisos de Ubicación" name="debe manejar permisos denegados" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-02: Obtener Ubicación Actual" name="debe obtener coordenadas actuales del usuario" time="0.001">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-02: Obtener Ubicación Actual" name="debe usar alta precisión para tracking de buses" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-03: Tracking en Tiempo Real" name="debe actualizar posición cada segundo (conductor activo)" time="0.632">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-03: Tracking en Tiempo Real" name="debe calcular velocidad del bus en km/h" time="0.001">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-03: Tracking en Tiempo Real" name="debe detectar bus detenido (velocidad &lt; 5 km/h)" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-03: Tracking en Tiempo Real" name="debe detectar bus en movimiento" time="0.001">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-04: Calcular Distancia entre Puntos" name="debe calcular distancia entre dos paradas" time="0.007">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-04: Calcular Distancia entre Puntos" name="debe identificar paradas cercanas (&lt; 500m)" time="0.001">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-05: ETA (Tiempo Estimado de Llegada)" name="debe calcular ETA basado en distancia y velocidad" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-05: ETA (Tiempo Estimado de Llegada)" name="debe ajustar ETA por tráfico (factor de congestión)" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-05: ETA (Tiempo Estimado de Llegada)" name="debe formatear ETA para mostrar al usuario" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-06: Optimización de Batería" name="debe usar precisión balanceada cuando batería &lt; 20%" time="0">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-06: Optimización de Batería" name="debe reducir frecuencia de updates cuando batería baja" time="0.001">
+    </testcase>
+    <testcase classname="GPS y Tracking - Integración Completa › MOB-INT-GPS-07: Métricas de Rendimiento GPS" name="debe obtener ubicación en menos de 3 segundos" time="0.513">
+    </testcase>
+  </testsuite>
+  <testsuite name="Button Component - Funcionalidad" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:07" time="4.483" tests="4">
+    <testcase classname="Button Component - Funcionalidad" name="debe renderizar correctamente" time="0.709">
+    </testcase>
+    <testcase classname="Button Component - Funcionalidad" name="debe ejecutar onPress cuando se hace click" time="0.008">
+    </testcase>
+    <testcase classname="Button Component - Funcionalidad" name="no debe ejecutar onPress cuando está deshabilitado" time="0.005">
+    </testcase>
+    <testcase classname="Button Component - Funcionalidad" name="debe ser accesible (testID)" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="Accessibility Tests" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:07" time="4.546" tests="7">
+    <testcase classname="Accessibility Tests" name="buttons should have accessibility labels" time="0.753">
+    </testcase>
+    <testcase classname="Accessibility Tests" name="images should have accessibility labels" time="0.006">
+    </testcase>
+    <testcase classname="Accessibility Tests" name="interactive elements should have proper roles" time="0.005">
+    </testcase>
+    <testcase classname="Accessibility Tests" name="should have accessibility hints for non-obvious actions" time="0.009">
+    </testcase>
+    <testcase classname="Accessibility Tests" name="should support minimum touch target size" time="0.004">
+    </testcase>
+    <testcase classname="Accessibility Tests" name="should group related elements" time="0.002">
+    </testcase>
+    <testcase classname="Accessibility Tests" name="should announce dynamic content changes" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Accesibilidad - Modos de Color" errors="0" failures="7" skipped="0" timestamp="2025-12-15T14:29:07" time="4.581" tests="24">
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-01: Contraste WCAG AA (4.5:1 para texto normal)" name="Modo Claro: Texto principal debe cumplir contraste mínimo" time="0.033">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-01: Contraste WCAG AA (4.5:1 para texto normal)" name="Modo Claro: Texto secundario debe cumplir contraste mínimo" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-01: Contraste WCAG AA (4.5:1 para texto normal)" name="Modo Oscuro: Texto principal debe cumplir contraste mínimo" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-01: Contraste WCAG AA (4.5:1 para texto normal)" name="Modo Oscuro: Texto secundario debe cumplir contraste mínimo" time="0.01">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-01: Contraste WCAG AA (4.5:1 para texto normal)" name="Alto Contraste: Texto principal debe cumplir contraste mínimo" time="0.008">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-01: Contraste WCAG AA (4.5:1 para texto normal)" name="Alto Contraste: Texto secundario debe cumplir contraste mínimo" time="0.015">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-02: Contraste WCAG AAA (7:1 para mejor legibilidad)" name="Alto Contraste debe superar AAA" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-03: Botones y Elementos Interactivos" name="Modo Claro: Botón primario debe tener buen contraste" time="0.003">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 4.5
+Received:    3.6601941794469877
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\color-modes.test.tsx:127:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-03: Botones y Elementos Interactivos" name="Modo Oscuro: Botón primario debe tener buen contraste" time="0.003">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 4.5
+Received:    2.9829032774625595
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\color-modes.test.tsx:127:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-03: Botones y Elementos Interactivos" name="Alto Contraste: Botón primario debe tener buen contraste" time="0.001">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 4.5
+Received:    1.4026017808936917
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\color-modes.test.tsx:127:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Modo Claro: Mensajes de éxito deben ser legibles" time="0.001">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 3
+Received:    2.5366569934610426
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\color-modes.test.tsx:141:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Modo Claro: Mensajes de error deben ser legibles" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Modo Claro: Mensajes de advertencia deben ser legibles" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Modo Oscuro: Mensajes de éxito deben ser legibles" time="0.001">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 3
+Received:    1.9224254384788253
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\color-modes.test.tsx:141:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Modo Oscuro: Mensajes de error deben ser legibles" time="0.001">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 3
+Received:    2.766144779174141
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\color-modes.test.tsx:151:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Modo Oscuro: Mensajes de advertencia deben ser legibles" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Alto Contraste: Mensajes de éxito deben ser legibles" time="0.001">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 3
+Received:    1.3721902770517513
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\color-modes.test.tsx:141:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Alto Contraste: Mensajes de error deben ser legibles" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-04: Estados de Éxito/Error/Warning" name="Alto Contraste: Mensajes de advertencia deben ser legibles" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-05: No depender solo del color" name="Estados deben tener indicadores adicionales al color" time="0.702">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-06: Renderizado en diferentes modos" name="Modo Claro: Componentes deben renderizar correctamente" time="0.004">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-06: Renderizado en diferentes modos" name="Modo Oscuro: Componentes deben renderizar correctamente" time="0.007">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-06: Renderizado en diferentes modos" name="Alto Contraste: Componentes deben renderizar correctamente" time="0.003">
+    </testcase>
+    <testcase classname="Accesibilidad - Modos de Color › MOB-A11Y-COLOR-07: Métricas de Contraste" name="Debe reportar métricas de todos los modos" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Accesibilidad - Escalado de Texto" errors="0" failures="2" skipped="0" timestamp="2025-12-15T14:29:07" time="4.59" tests="24">
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-01: Tamaños Mínimos" name="Texto Pequeño: Texto base debe ser al menos 16px" time="0.044">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-01: Tamaños Mínimos" name="Texto Pequeño: Texto pequeño no debe ser menor a 12px" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-01: Tamaños Mínimos" name="Texto Mediano (Defecto): Texto base debe ser al menos 16px" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-01: Tamaños Mínimos" name="Texto Mediano (Defecto): Texto pequeño no debe ser menor a 12px" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-01: Tamaños Mínimos" name="Texto Grande: Texto base debe ser al menos 16px" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-01: Tamaños Mínimos" name="Texto Grande: Texto pequeño no debe ser menor a 12px" time="0.007">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-02: Escala Consistente" name="Debe mantener proporciones entre escalas" time="0.003">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-03: Renderizado con diferentes escalas" name="Texto Pequeño: Componentes deben renderizar sin overflow" time="0.771">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-03: Renderizado con diferentes escalas" name="Texto Mediano (Defecto): Componentes deben renderizar sin overflow" time="0.006">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-03: Renderizado con diferentes escalas" name="Texto Grande: Componentes deben renderizar sin overflow" time="0.005">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-04: Botones y Elementos Táctiles" name="Texto Pequeño: Botones deben mantener tamaño mínimo táctil (44x44)" time="0.004">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 44
+Received:    40.8
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\text-scaling.test.tsx:134:29)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-04: Botones y Elementos Táctiles" name="Texto Mediano (Defecto): Botones deben mantener tamaño mínimo táctil (44x44)" time="0.001">
+      <failure>Error: expect(received).toBeGreaterThanOrEqual(expected)
+
+Expected: &gt;= 44
+Received:    43.2
+    at Object.toBeGreaterThanOrEqual (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\text-scaling.test.tsx:134:29)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-04: Botones y Elementos Táctiles" name="Texto Grande: Botones deben mantener tamaño mínimo táctil (44x44)" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-05: Legibilidad con Escalado" name="Texto grande debe ser legible sin cortes" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-05: Legibilidad con Escalado" name="Encabezados deben escalar proporcionalmente" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-06: Line Height (Altura de Línea)" name="Line height debe ser proporcional al tamaño de texto" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-07: Espaciado de Párrafos" name="Espaciado entre párrafos debe ser adecuado" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-08: Ancho de Línea" name="Líneas no deben ser demasiado largas" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-09: Contraste con Texto Grande" name="Texto grande puede tener contraste reducido (3:1)" time="0">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-10: Métricas de Escalado" name="Debe reportar todas las escalas disponibles" time="0.009">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-11: Compatibilidad con Font Scaling del Sistema" name="Debe respetar configuración de accesibilidad del sistema" time="0.004">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-12: Inputs y Campos de Texto" name="Texto Pequeño: Inputs deben tener tamaño adecuado" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-12: Inputs y Campos de Texto" name="Texto Mediano (Defecto): Inputs deben tener tamaño adecuado" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Escalado de Texto › MOB-A11Y-TEXT-12: Inputs y Campos de Texto" name="Texto Grande: Inputs deben tener tamaño adecuado" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Advanced Accessibility Tests" errors="0" failures="2" skipped="0" timestamp="2025-12-15T14:29:07" time="4.674" tests="6">
+    <testcase classname="Advanced Accessibility Tests › Labels y Hints" name="botones deben tener accessibilityLabel" time="0.722">
+    </testcase>
+    <testcase classname="Advanced Accessibility Tests › Labels y Hints" name="inputs deben tener accessibilityLabel o accessibilityHint" time="0.054">
+    </testcase>
+    <testcase classname="Advanced Accessibility Tests › Labels y Hints" name="imágenes deben tener accessibilityLabel descriptivo" time="0.069">
+    </testcase>
+    <testcase classname="Advanced Accessibility Tests › Anuncios Dinámicos" name="actualizaciones importantes deben usar accessibilityLiveRegion" time="0.006">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;polite&quot;
+Received: undefined
+    at Object.toBe (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\a11y-advanced.test.tsx:56:59)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Advanced Accessibility Tests › Anuncios Dinámicos" name="alertas urgentes deben usar accessibilityLiveRegion=&quot;assertive&quot;" time="0.003">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;assertive&quot;
+Received: undefined
+    at Object.toBe (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\a11y-advanced.test.tsx:67:52)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Advanced Accessibility Tests › Métricas de Accesibilidad" name="debe reportar % de elementos con accessibilityLabel" time="0.013">
+    </testcase>
+  </testsuite>
+  <testsuite name="Performance Tests - Renderizado" errors="0" failures="2" skipped="0" timestamp="2025-12-15T14:29:07" time="4.731" tests="7">
+    <testcase classname="Performance Tests - Renderizado › Componentes Simples" name="debe renderizar componente simple rápidamente" time="0.433">
+      <failure>Error: expect(received).toBeLessThan(expected)
+
+Expected: &lt; 100
+Received:   400
+    at Object.toBeLessThan (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\performance\rendering.test.tsx:26:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Performance Tests - Renderizado › Componentes Simples" name="debe renderizar lista de 10 items rápidamente" time="0.616">
+      <failure>Error: expect(received).toBeLessThan(expected)
+
+Expected: &lt; 200
+Received:   608
+    at Object.toBeLessThan (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\performance\rendering.test.tsx:53:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Performance Tests - Renderizado › Componentes Complejos" name="debe renderizar 50 items en menos de 500ms" time="0.013">
+    </testcase>
+    <testcase classname="Performance Tests - Renderizado › Componentes Complejos" name="debe renderizar 100 items en menos de 1000ms" time="0.023">
+    </testcase>
+    <testcase classname="Performance Tests - Renderizado › Re-renders" name="debe manejar múltiples re-renders eficientemente" time="0.012">
+    </testcase>
+    <testcase classname="Performance Tests - Renderizado › Listas Grandes" name="debe renderizar lista de 100 items con FlatList" time="0.007">
+    </testcase>
+    <testcase classname="Performance Tests - Renderizado › Métricas de Memoria (si disponible)" name="debe tener uso de memoria razonable" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="Accesibilidad - Screen Reader Support" errors="0" failures="4" skipped="0" timestamp="2025-12-15T14:29:07" time="4.804" tests="21">
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-01: Labels Descriptivos" name="Botones deben tener accessibilityLabel" time="0.789">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-01: Labels Descriptivos" name="Imágenes decorativas deben ser ignoradas por screen reader" time="0.093">
+      <failure>Error: Expected 1 but found 2 instances with node type: &quot;Image&quot;
+    at Object.UNSAFE_getByType (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\screen-reader.test.tsx:45:22)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-01: Labels Descriptivos" name="Inputs deben tener label y hint" time="0.037">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-02: Roles Apropiados" name="Botones deben usar role=&quot;button&quot;" time="0.005">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-02: Roles Apropiados" name="Links deben usar role=&quot;link&quot;" time="0.003">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-02: Roles Apropiados" name="Encabezados deben usar role=&quot;header&quot;" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-03: Estados Accesibles" name="Elementos deshabilitados deben anunciarse" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-03: Estados Accesibles" name="Elementos seleccionados deben anunciarse" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-03: Estados Accesibles" name="Estados de carga deben anunciarse" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-03: Estados Accesibles" name="Checkboxes deben anunciar estado checked" time="0.003">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-04: Anuncios Dinámicos (Live Regions)" name="Actualizaciones importantes deben usar liveRegion=&quot;polite&quot;" time="0.004">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;polite&quot;
+Received: undefined
+    at Object.toBe (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\screen-reader.test.tsx:173:59)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-04: Anuncios Dinámicos (Live Regions)" name="Alertas urgentes deben usar liveRegion=&quot;assertive&quot;" time="0.002">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;assertive&quot;
+Received: undefined
+    at Object.toBe (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\screen-reader.test.tsx:184:52)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-05: Orden de Foco" name="Elementos deben tener orden lógico" time="0.002">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-05: Orden de Foco" name="Modal debe tener foco inicial correcto" time="0.005">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-06: Valores y Rangos" name="Sliders deben anunciar valor actual" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-06: Valores y Rangos" name="Progress indicators deben anunciar progreso" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-07: Agrupación de Elementos" name="Elementos relacionados deben agruparse" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-07: Agrupación de Elementos" name="Listas deben identificarse correctamente" time="0.076">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-08: Acciones Personalizadas" name="Elementos con múltiples acciones deben anunciarlas" time="0.001">
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-09: Feedback Táctil" name="Botones deben proporcionar feedback" time="0.001">
+      <failure>Error: expect(received).toBeDefined()
+
+Received: undefined
+    at Object.toBeDefined (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\accessibility\screen-reader.test.tsx:363:36)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Accesibilidad - Screen Reader Support › MOB-A11Y-SR-10: Métricas de Cobertura" name="Debe reportar cobertura de accessibility labels" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Métricas de Rendimiento Móvil" errors="0" failures="1" skipped="0" timestamp="2025-12-15T14:29:07" time="5.392" tests="12">
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-01: Tiempo de Renderizado Inicial" name="pantalla de inicio debe renderizar &lt; 1000ms" time="0.475">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-01: Tiempo de Renderizado Inicial" name="mapa debe renderizar marcadores &lt; 2000ms" time="0.026">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-02: FlatList Performance" name="lista de 100 rutas debe renderizar &lt; 500ms" time="0.526">
+      <failure>Error: expect(received).toBeLessThan(expected)
+
+Expected: &lt; 500
+Received:   523
+    at Object.toBeLessThan (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\performance\metrics.test.tsx:138:26)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-02: FlatList Performance" name="lista infinita (1000 items) debe ser eficiente" time="0.009">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-03: Re-render Performance" name="actualización de estado debe ser rápida &lt; 50ms" time="0.109">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-04: Carga de Imágenes" name="debe renderizar 10 imágenes &lt; 1500ms" time="0.043">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-05: Algoritmo RAPTOR" name="búsqueda de ruta simple debe completar &lt; 500ms" time="0.001">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-05: Algoritmo RAPTOR" name="búsqueda con transbordos debe completar &lt; 2000ms" time="0.001">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-06: Uso de Memoria" name="componente grande debe usar &lt; 50MB" time="0.004">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-07: Métricas de Interacción" name="tiempo de respuesta a tap &lt; 100ms" time="0.001">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-07: Métricas de Interacción" name="navegación entre pantallas &lt; 300ms" time="0.001">
+    </testcase>
+    <testcase classname="Métricas de Rendimiento Móvil › MOB-PER-08: Carga de Datos Async" name="fetch de rutas debe completar &lt; 3000ms" time="0.505">
+    </testcase>
+  </testsuite>
+  <testsuite name="Rendimiento - Firebase Performance Monitoring" errors="0" failures="0" skipped="0" timestamp="2025-12-15T14:29:08" time="6.735" tests="19">
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-01: Configuración de Performance" name="debe verificar que Firebase Performance está disponible" time="0.019">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-01: Configuración de Performance" name="debe poder crear traces" time="0.002">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-02: Tiempo de Inicio de App" name="debe medir el tiempo de inicialización completo" time="0.172">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-02: Tiempo de Inicio de App" name="debe medir tiempo hasta primera renderización" time="0.16">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-03: Operaciones de Firebase" name="debe medir tiempo de lectura de Firestore" time="0.259">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-03: Operaciones de Firebase" name="debe medir tiempo de escritura a Firestore" time="0.2">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-03: Operaciones de Firebase" name="debe medir autenticación con Firebase Auth" time="0.401">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-04: Navegación entre Pantallas" name="debe medir transición de Home a Mapa" time="0.126">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-04: Navegación entre Pantallas" name="debe medir carga de pantalla de búsqueda" time="0.081">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-05: Algoritmo RAPTOR" name="debe medir tiempo de cálculo de ruta óptima" time="0.132">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-05: Algoritmo RAPTOR" name="debe medir cálculo de múltiples rutas" time="0.182">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-06: Caché y Persistencia" name="debe medir escritura a AsyncStorage" time="0.002">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-06: Caché y Persistencia" name="debe medir lectura desde AsyncStorage" time="0">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-07: GPS Tracking" name="debe medir latencia de actualización GPS" time="0.213">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-07: GPS Tracking" name="debe medir frecuencia de actualizaciones GPS" time="0.541">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-08: HTTP Metrics" name="debe crear HTTP metric para API call" time="0.315">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-08: HTTP Metrics" name="debe medir POST request" time="0.265">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-09: Custom Metrics" name="debe registrar métricas personalizadas" time="0">
+    </testcase>
+    <testcase classname="Rendimiento - Firebase Performance Monitoring › MOB-PERF-FB-10: Reporte Final" name="debe generar reporte completo" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="useLocation Hook" errors="0" failures="5" skipped="0" timestamp="2025-12-15T14:29:07" time="7.96" tests="5">
+    <testcase classname="useLocation Hook" name="should request location permissions on mount" time="1.068">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalled()
+
+Expected number of calls: &gt;= 1
+Received number of calls:    0
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\hooks\useLocation.test.ts:15:18)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at _next (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+    at C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="useLocation Hook" name="should get current location when permission granted" time="1.008">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: -3.99313
+Received: undefined
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\hooks\useLocation.test.ts:27:18)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at _next (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+    at C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="useLocation Hook" name="should handle permission denied" time="1.011">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;Location permission denied&quot;
+Received: null
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\hooks\useLocation.test.ts:41:18)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at _next (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+    at C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="useLocation Hook" name="should handle location errors" time="1.004">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;Location unavailable&quot;
+Received: null
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\hooks\useLocation.test.ts:57:18)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at _next (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+    at C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+    <testcase classname="useLocation Hook" name="should update loading state correctly" time="0.004">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+    at Object.toBe (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\__tests__\hooks\useLocation.test.ts:65:36)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:3:17)
+    at _next (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:17:9)
+    at C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:22:7
+    at new Promise (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\@babel\runtime\helpers\asyncToGenerator.js:14:12)
+    at Promise.then.completed (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\utils.js:231:10)
+    at _callCircusTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:316:40)
+    at _runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:252:3)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:126:9)
+    at _runTestsForDescribeBlock (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:121:9)
+    at run (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\run.js:71:3)
+    at runAndTransformResultsToJestFormat (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapterInit.js:122:21)
+    at jestAdapter (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:19)
+    at runTestInternal (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:367:16)
+    at runTest (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\runTest.js:444:34)
+    at Object.worker (C:\Users\kevin\Documents\Github\TransiLoja\App-Movil\node_modules\jest-runner\build\testWorker.js:106:12)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

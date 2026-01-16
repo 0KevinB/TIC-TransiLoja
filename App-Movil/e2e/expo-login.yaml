@@ -1,0 +1,74 @@
+appId: "host.exp.exponent"
+---
+# Prueba de login para Expo Go
+# IMPORTANTE: La app debe estar ABIERTA en Expo Go antes de ejecutar
+
+# Verificar que la app está visible
+- assertVisible: ".*"
+
+# Test 1: Login con credenciales válidas
+# Paso 1: Ir a la pestaña de Ajustes
+- tapOn: "Ajustes"
+- waitForAnimationToEnd
+
+# Paso 2: Tap en el botón "Iniciar Sesión" usando testID
+- tapOn:
+    id: "settings-login-button"
+- extendedWaitUntil:
+    visible: "TransiLoja"
+    timeout: 5000
+
+# Paso 3: Verificar que estamos en la pantalla de login
+- assertVisible: "Iniciar Sesión"
+- assertVisible: "Correo electrónico"
+- assertVisible: "Contraseña"
+
+# Paso 4: Ingresar correo electrónico
+- tapOn: "Correo electrónico"
+- inputText: "carolalvaradojime@gmail.com"
+
+# Paso 5: Ingresar contraseña
+- tapOn: "Contraseña"
+- inputText: "123456"
+
+# Paso 6: Hacer scroll para asegurar que el botón sea visible
+- scroll:
+    direction: DOWN
+- waitForAnimationToEnd
+
+# Paso 7: Presionar el botón usando testID (más confiable)
+- tapOn:
+    id: "login-submit-button"
+- extendedWaitUntil:
+    visible: "Inicio|Alertas"
+    timeout: 10000
+
+# Verificar que el login fue exitoso (estamos en la pantalla principal)
+- assertVisible: "Inicio"
+
+# Test 2: Logout
+- tapOn: "Ajustes"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "logout-button"
+    direction: DOWN
+- tapOn:
+    id: "logout-button"
+- extendedWaitUntil:
+    visible: "¿Estás seguro"
+    timeout: 3000
+- tapOn: "Cerrar Sesión"
+- extendedWaitUntil:
+    visible: "TransiLoja"
+    timeout: 5000
+
+- assertVisible: "TransiLoja"
+
+# Test 3: Modo invitado
+- tapOn:
+    id: "guest-access-button"
+- extendedWaitUntil:
+    visible: "Inicio|Alertas"
+    timeout: 8000
+- assertVisible: "Inicio"

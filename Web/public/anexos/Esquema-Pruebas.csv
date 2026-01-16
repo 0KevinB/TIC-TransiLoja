@@ -1,0 +1,96 @@
+ID,HU,Plataforma,Título / Escenario,Categoría,Herramienta,Descripción de la Prueba (Pasos),Criterio de Éxito / Métrica
+WEB-E2E-001,HU3,Web Admin,Mostrar formulario de login,Funcionalidad,Cypress,Visitar página principal -> Verificar campos email y password -> Verificar botón submit,Formulario de login visible con campos email y password
+WEB-E2E-002,HU3,Web Admin,Validar credenciales inválidas,Funcionalidad,Cypress,Ingresar email y contraseña inválidos -> Clic en submit,Mensaje de error visible (error/invalid/incorrecto)
+WEB-E2E-003,HU3,Web Admin,Login exitoso con credenciales válidas,Funcionalidad,Cypress,Ingresar credenciales válidas -> Clic en submit,Redirección a /dashboard exitosa
+WEB-E2E-004,HU3,Web Admin,Cerrar sesión correctamente,Funcionalidad,Cypress,Login -> Navegar a dashboard -> Ejecutar logout,Redirección a login y formulario visible
+WEB-E2E-005,RNF-Seg,Web Admin,Redirigir rutas protegidas sin auth,Seguridad,Cypress,Limpiar sesión -> Intentar acceder a /dashboard,Redirección a login o formulario de login visible
+WEB-E2E-006,HU3,Web Admin,Mantener sesión después de recargar,Funcionalidad,Cypress,Login -> Verificar dashboard -> Recargar página,Sesión mantenida sin mostrar login nuevamente
+WEB-E2E-007,HU16,Web Admin,Mostrar lista de buses,Funcionalidad,Cypress,Login -> Navegar a /dashboard/buses,"Lista de buses visible (tabla o cards) o mensaje ""No hay buses"""
+WEB-E2E-008,HU16,Web Admin,Crear nuevo bus,Funcionalidad,Cypress,Navegar a buses -> Clic en crear/nuevo -> Llenar formulario con TEST-123,Formulario de creación visible y completado
+WEB-E2E-009,HU16,Web Admin,Mostrar acciones de bus,Funcionalidad,Cypress,Navegar a buses -> Verificar botones de acción,Botones de acción (editar/eliminar) visibles
+WEB-E2E-010,HU16,Web Admin,Buscar o filtrar buses,Funcionalidad,Cypress,Navegar a buses -> Verificar input de búsqueda o select,Mecanismo de búsqueda/filtro disponible
+WEB-E2E-011,HU16,Web Admin,Cargar buses sin errores críticos,Estabilidad,Cypress,Navegar a /dashboard/buses,Página carga sin Error 500 o mensajes críticos
+WEB-E2E-012,HU4,Web Admin,Gestión de rutas,Funcionalidad,Cypress,Login -> Navegar a /dashboard/rutas,Página de rutas carga correctamente
+WEB-E2E-013,HU5,Web Admin,Gestión de paradas,Funcionalidad,Cypress,Login -> Navegar a /dashboard/paradas,Página de paradas carga correctamente
+WEB-E2E-014,HU3,Web Admin,Gestión de viajes,Funcionalidad,Cypress,Login -> Navegar a /dashboard/viajes,Página de viajes carga correctamente
+WEB-E2E-015,HU17,Web Admin,Gestión de conductores,Funcionalidad,Cypress,Login -> Navegar a /dashboard/conductores,Página de conductores carga correctamente
+WEB-E2E-016,HU3,Web Admin,Vista del dashboard principal,Funcionalidad,Cypress,Login -> Navegar a /dashboard,Dashboard principal carga con métricas y widgets
+WEB-E2E-017,RNF-Efic,Web Admin,Rendimiento de carga,Performance,Cypress,Medir tiempos de carga de páginas principales,Tiempo de carga < 3 segundos
+WEB-E2E-018,RNF-Fiab,Web Admin,Disponibilidad del sistema,Disponibilidad,Cypress,Verificar uptime y respuesta del servidor,Sistema responde correctamente 99.9% del tiempo
+WEB-E2E-019,RNF-Usab,Web Admin,Usabilidad de la interfaz,Usabilidad,Cypress,Verificar navegación y accesibilidad de elementos,Todos los elementos interactivos son accesibles
+WEB-UNIT-001,Soporte UI,Web Admin,Componente Badge,Funcionalidad,Jest,Renderizar Badge con diferentes variantes,Badge se renderiza correctamente con todas las variantes
+WEB-UNIT-002,Soporte UI,Web Admin,Componente Button,Funcionalidad,Jest,Renderizar Button y verificar eventos onClick,Button se renderiza y dispara eventos correctamente
+WEB-UNIT-003,Soporte UI,Web Admin,Componente Card,Funcionalidad,Jest,Renderizar Card con header y footer,Card muestra contenido y estructura correcta
+WEB-UNIT-004,Soporte UI,Web Admin,Componente Checkbox,Funcionalidad,Jest,Renderizar Checkbox y cambiar estado,Checkbox cambia de estado al hacer clic
+WEB-UNIT-005,Soporte UI,Web Admin,Componente Dialog,Funcionalidad,Jest,Abrir y cerrar Dialog,Dialog se abre y cierra correctamente
+WEB-UNIT-006,Soporte UI,Web Admin,Componente Input,Funcionalidad,Jest,Renderizar Input y manejar cambios,Input captura y maneja cambios de valor
+WEB-UNIT-007,Soporte UI,Web Admin,Componente Label,Funcionalidad,Jest,Renderizar Label asociado a input,Label se asocia correctamente con input
+WEB-UNIT-008,Soporte UI,Web Admin,Componente Select,Funcionalidad,Jest,Renderizar Select con opciones,Select muestra opciones y permite selección
+WEB-UNIT-009,Soporte UI,Web Admin,Componente Switch,Funcionalidad,Jest,Toggle Switch on/off,Switch cambia estado correctamente
+WEB-UNIT-010,Soporte UI,Web Admin,Componente Table,Funcionalidad,Jest,Renderizar Table con datos,Table muestra filas y columnas correctamente
+WEB-UNIT-011,Soporte UI,Web Admin,Componente Textarea,Funcionalidad,Jest,Renderizar Textarea multilinea,Textarea acepta múltiples líneas de texto
+WEB-UNIT-012,Soporte,Web Admin,Firebase config,Integración,Jest,Verificar configuración de Firebase,Firebase inicializa correctamente con config válida
+WEB-UNIT-013,Soporte,Web Admin,Utilidades generales,Funcionalidad,Jest,Probar funciones de utils.ts,Funciones utilitarias funcionan correctamente
+WEB-UNIT-014,HU3,Web Admin,Hook useAuth,Funcionalidad,Jest,Probar estado de autenticación,Hook useAuth maneja estado correctamente
+WEB-UNIT-015,RNF-Efic,Web Admin,Algoritmo RAPTOR,Performance,Jest,Calcular rutas óptimas con RAPTOR,RAPTOR calcula rutas en tiempo aceptable
+WEB-UNIT-016,Soporte,Web Admin,Utilidades unitarias,Funcionalidad,Jest,Probar funciones auxiliares,Funciones auxiliares retornan valores esperados
+WEB-PERF-001,RNF-Efic,Web Admin,Performance página principal,Performance,Lighthouse,Medir métricas de homepage,Score >= 80 en Performance
+WEB-PERF-002,RNF-Efic,Web Admin,Performance dashboard,Performance,Lighthouse,Medir métricas de /dashboard,Score >= 80 en Performance
+WEB-PERF-003,RNF-Efic,Web Admin,Performance alertas,Performance,Lighthouse,Medir métricas de /dashboard/alerts,Score >= 80 en Performance
+WEB-PERF-004,RNF-Efic,Web Admin,Performance buses,Performance,Lighthouse,Medir métricas de /dashboard/buses,Score >= 80 en Performance
+WEB-PERF-005,RNF-Efic,Web Admin,Performance conductores,Performance,Lighthouse,Medir métricas de /dashboard/drivers,Score >= 80 en Performance
+WEB-PERF-006,RNF-Efic,Web Admin,Performance reportes,Performance,Lighthouse,Medir métricas de /dashboard/reports,Score >= 80 en Performance
+WEB-PERF-007,RNF-Efic,Web Admin,Performance rutas,Performance,Lighthouse,Medir métricas de /dashboard/routes,Score >= 80 en Performance
+WEB-PERF-008,RNF-Efic,Web Admin,Performance paradas,Performance,Lighthouse,Medir métricas de /dashboard/stops,Score >= 80 en Performance
+WEB-PERF-009,RNF-Efic,Web Admin,Performance viajes,Performance,Lighthouse,Medir métricas de /dashboard/trips,Score >= 80 en Performance
+MOB-A11Y-001,RNF-Acc,App Móvil,Accesibilidad básica,Accesibilidad,Jest,Verificar labels y hints en componentes,Todos los componentes tienen accessibilityLabel y accessibilityHint
+MOB-A11Y-002,RNF-Acc,App Móvil,Accesibilidad avanzada,Accesibilidad,Jest,Verificar roles ARIA y navegación por teclado,Roles ARIA correctos y navegación funcional
+MOB-A11Y-003,RNF-Acc,App Móvil,Modo claro/oscuro,Accesibilidad,Jest,Cambiar entre modo claro y oscuro,Colores cambian correctamente en ambos modos
+MOB-A11Y-004,RNF-Acc,App Móvil,Escalado de texto,Accesibilidad,Jest,Aumentar tamaño de texto a 150% y 200%,Texto escala correctamente sin romper layout
+MOB-A11Y-005,RNF-Acc,App Móvil,Screen reader,Accesibilidad,Jest,Navegar con screen reader,Todos los elementos son anunciados correctamente
+MOB-COMP-001,HU21,App Móvil,Componente BusMarker,Funcionalidad,Jest,Renderizar marcador de bus en mapa,BusMarker muestra información correcta del bus
+MOB-COMP-002,Soporte UI,App Móvil,Componente Button,Funcionalidad,Jest,Renderizar Button con variantes,Button se renderiza correctamente con todas las variantes
+MOB-COMP-003,Soporte UI,App Móvil,Componente RouteCard,Funcionalidad,Jest,Mostrar tarjeta de ruta,RouteCard muestra origen destino y duración
+MOB-HOOK-001,Soporte,App Móvil,Hook useLocation,Funcionalidad,Jest,Obtener ubicación actual del usuario,Hook retorna latitud y longitud correctas
+MOB-SCRN-001,HU21,App Móvil,Pantalla Home,Funcionalidad,Jest,Renderizar pantalla principal con mapa,HomeScreen muestra mapa y buses en tiempo real
+MOB-UTIL-001,Soporte,App Móvil,Utilidades de ubicación,Funcionalidad,Jest,Calcular distancia entre coordenadas,Función calcula distancia con precisión aceptable
+MOB-INT-001,HU15,App Móvil,Modo Offline - Caché de Rutas,Funcionalidad,Jest,Guardar rutas buscadas en AsyncStorage -> Recuperar offline,Rutas se guardan y recuperan correctamente en modo offline
+MOB-INT-002,HU15,App Móvil,Modo Offline - Historial de búsquedas,Funcionalidad,Jest,Mantener historial de búsquedas offline,Historial se mantiene disponible sin conexión
+MOB-INT-003,HU15,App Móvil,Modo Offline - Limpieza de caché,Funcionalidad,Jest,Eliminar caché antiguo (> 7 días),Caché antiguo se elimina correctamente
+MOB-INT-004,HU15,App Móvil,Detección de conexión - Estado offline,Funcionalidad,Jest,Detectar estado offline con NetInfo,App detecta correctamente cuando está offline
+MOB-INT-005,HU15,App Móvil,Detección de conexión - Reconexión,Funcionalidad,Jest,Detectar cuando se recupera la conexión,App detecta correctamente cuando vuelve online
+MOB-INT-006,HU15,App Móvil,Detección de conexión - Listener,Funcionalidad,Jest,Agregar listener para cambios de conectividad,Listener se registra correctamente
+MOB-INT-007,Soporte,App Móvil,Sincronización al reconectar,Funcionalidad,Jest,Sincronizar acciones pendientes al reconectar,Acciones pendientes se sincronizan correctamente
+MOB-INT-008,Soporte,App Móvil,Limpiar acciones sincronizadas,Funcionalidad,Jest,Eliminar acciones ya sincronizadas,Acciones sincronizadas se limpian del storage
+MOB-INT-009,HU15,App Móvil,Paradas cercanas offline,Funcionalidad,Jest,Cachear paradas cercanas,Paradas cercanas disponibles en modo offline
+MOB-INT-010,Soporte,App Móvil,Ordenar paradas por distancia,Funcionalidad,Jest,Ordenar lista de paradas por distancia,Paradas se ordenan correctamente de menor a mayor distancia
+MOB-INT-011,HU15,App Móvil,Favoritos offline - Guardar,Funcionalidad,Jest,Guardar rutas favoritas localmente,Favoritos se guardan en AsyncStorage
+MOB-INT-012,HU15,App Móvil,Favoritos offline - Agregar,Funcionalidad,Jest,Agregar nuevo favorito sin conexión,Favorito se agrega a la lista local
+MOB-INT-013,RNF-Efic,App Móvil,Rendimiento caché - Tiempo de carga,Performance,Jest,Cargar datos cacheados,Datos cacheados cargan en < 100ms
+MOB-INT-014,RNF-Efic,App Móvil,Rendimiento caché - Tamaño,Performance,Jest,Medir tamaño del caché,Tamaño de caché < 1MB
+MOB-INT-015,Soporte,App Móvil,Tracking GPS,Integración,Jest,Rastrear ubicación del usuario en tiempo real,GPS actualiza ubicación correctamente
+MOB-INT-016,Soporte,App Móvil,Creación de viaje,Integración,Jest,Crear nuevo viaje con origen y destino,Viaje se crea correctamente en el sistema
+MOB-PERF-001,RNF-Efic,App Móvil,Rendimiento de renderizado,Performance,Jest,Medir tiempo de renderizado de componentes,Componentes renderizan en < 16ms (60 FPS)
+MOB-PERF-002,RNF-Efic,App Móvil,Métricas de performance,Performance,Jest,Recolectar métricas de rendimiento de la app,Métricas se recolectan correctamente
+MOB-PERF-003,RNF-Efic,App Móvil,Firebase Performance - App start,Performance,Jest,Medir tiempo de inicio de app,Tiempo de inicio registrado en Firebase Performance
+MOB-PERF-004,RNF-Efic,App Móvil,Firebase Performance - Firestore read,Performance,Jest,Medir operaciones de lectura Firestore,Operaciones read medidas correctamente
+MOB-PERF-005,RNF-Efic,App Móvil,Firebase Performance - Firestore write,Performance,Jest,Medir operaciones de escritura Firestore,Operaciones write medidas correctamente
+MOB-PERF-006,RNF-Efic,App Móvil,Firebase Performance - Firestore query,Performance,Jest,Medir queries de Firestore,Queries medidas correctamente
+MOB-PERF-007,RNF-Efic,App Móvil,Firebase Performance - Auth sign in,Performance,Jest,Medir tiempo de autenticación,Autenticación medida correctamente
+MOB-PERF-008,RNF-Efic,App Móvil,Firebase Performance - Screen transitions,Performance,Jest,Medir transiciones entre pantallas,Transiciones medidas correctamente
+MOB-PERF-009,RNF-Efic,App Móvil,Firebase Performance - RAPTOR algorithm,Performance,Jest,Medir tiempo de cálculo de rutas RAPTOR,Algoritmo RAPTOR medido correctamente
+MOB-PERF-010,RNF-Efic,App Móvil,Firebase Performance - AsyncStorage cache,Performance,Jest,Medir operaciones de caché,Operaciones de caché medidas correctamente
+MOB-PERF-011,RNF-Efic,App Móvil,Firebase Performance - GPS update,Performance,Jest,Medir actualizaciones GPS,GPS tracking medido correctamente
+MOB-PERF-012,RNF-Efic,App Móvil,Firebase Performance - HTTP requests,Performance,Jest,Medir requests HTTP automáticos,Requests HTTP medidos correctamente
+MOB-PERF-013,RNF-Efic,App Móvil,Firebase Performance - Custom metrics,Performance,Jest,Métricas personalizadas,Custom traces funcionan correctamente
+MOB-CRASH-001,RNF-Fiab,App Móvil,Crashlytics - Registro fatal crashes,Disponibilidad,Jest,Simular crash fatal,Crash reportado en consola/dashboard
+MOB-CRASH-002,RNF-Fiab,App Móvil,Crashlytics - Errores no fatales,Disponibilidad,Jest,Reportar error no fatal,Error reportado como non-fatal
+MOB-CRASH-003,RNF-Fiab,App Móvil,Crashlytics - Logs de actividad,Disponibilidad,Jest,Registrar logs antes de error,Logs aparecen en el reporte de crash
+MOB-CRASH-004,RNF-Fiab,App Móvil,Crashlytics - User attributes,Disponibilidad,Jest,Setear ID de usuario en crashlytics,Reporte incluye ID de usuario
+MOB-CRASH-005,RNF-Fiab,App Móvil,Crashlytics - Contexto de errores,Disponibilidad,Jest,Agregar keys/values al reporte,Reporte incluye claves personalizadas
+MOB-CRASH-006,RNF-Fiab,App Móvil,Crashlytics - App lifecycle,Disponibilidad,Jest,Crash en background vs foreground,Estado de la app registrado correctamente
+MOB-CRASH-007,RNF-Fiab,App Móvil,Crashlytics - Métricas de uptime,Disponibilidad,Jest,Calcular crash-free rate,Métricas de disponibilidad calculadas
+MOB-CRASH-008,RNF-Fiab,App Móvil,Crashlytics - Reportes offline,Disponibilidad,Jest,Sincronizar reportes cuando vuelve online,Reportes se sincronizan correctamente
+MOB-E2E-001,HU12,App Móvil,Flow de búsqueda de rutas E2E,Funcionalidad,Maestro,Abrir app -> Buscar ruta -> Ver resultados,Búsqueda completa exitosa
+MOB-E2E-002,HU21,App Móvil,Flow de visualización de buses E2E,Funcionalidad,Maestro,Abrir app -> Ver mapa -> Ver buses en tiempo real,Buses visibles en mapa
+MOB-E2E-003,HU11,App Móvil,Flow de favoritos E2E,Funcionalidad,Maestro,Buscar ruta -> Guardar como favorito -> Ver en favoritos,Favorito guardado y visible

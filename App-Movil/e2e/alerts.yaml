@@ -1,0 +1,85 @@
+appId: com.transiloja.app
+---
+# Limpiar estado y lanzar app
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 10000
+
+# Login como invitado (si estamos en pantalla de login)
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 5000
+
+# Verificar que estamos en home
+- assertVisible: "Ver Mapa|Planificar Viaje"
+
+# Test 1: Navegar a la pestaña de Alertas
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas|Lista de alertas"
+
+# Test 2: Verificar filtros de alertas están visibles
+- assertVisible: "Todas"
+- assertVisible: "Activas"
+- assertVisible: "Próximas"
+- assertVisible: "Finalizadas"
+
+# Test 3: Filtrar por "Todas"
+- tapOn: "Todas"
+- waitForAnimationToEnd
+
+# Test 4: Filtrar por "Activas"
+- tapOn: "Activas"
+- waitForAnimationToEnd
+
+# Test 5: Filtrar por "Próximas"
+- tapOn: "Próximas"
+- waitForAnimationToEnd
+
+# Test 6: Filtrar por "Finalizadas"
+- tapOn: "Finalizadas"
+- waitForAnimationToEnd
+
+# Test 7: Volver a "Todas"
+- tapOn: "Todas"
+- waitForAnimationToEnd
+
+# Test 8: Si hay alertas, abrir detalles de la primera
+- runFlow:
+    when:
+      visible:
+        pattern: ".*"
+        below:
+          text: "Finalizadas"
+    commands:
+      # Tap en la primera alerta disponible
+      - tapOn:
+          index: 0
+          below:
+            text: "Finalizadas"
+      - extendedWaitUntil:
+          visible: ".*"
+          timeout: 3000
+      - waitForAnimationToEnd
+      # Cerrar el modal
+      - back
+      - waitForAnimationToEnd
+
+# Test 9: Pull to refresh
+- scroll
+- waitForAnimationToEnd
+
+# Test 10: Verificar que seguimos en alertas
+- assertVisible: "Alertas|Todas"
+- assertVisible: "Activas"

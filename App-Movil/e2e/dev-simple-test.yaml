@@ -1,0 +1,50 @@
+appId: com.transiloja.app
+---
+# Prueba simple para Expo Development Client
+# IMPORTANTE: Debes tener el servidor Expo corriendo (npx expo start)
+
+# Lanzar la app (sin clearState para evitar desconectar el dev server)
+- launchApp
+
+# Esperar más tiempo porque el dev client puede tardar en cargar
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 20000
+
+# Esperar a que termine de cargar
+- waitForAnimationToEnd
+
+# Verificar que estamos en alguna pantalla
+- runFlow:
+    when:
+      visible: "Ver Mapa|Planificar Viaje"
+    commands:
+      - echo: "✓ Home screen visible"
+      - assertVisible: "Ver Mapa"
+      - assertVisible: "Planificar Viaje"
+      - assertVisible: "Rutas"
+      - assertVisible: "Paradas"
+
+# Test de navegación básica
+- echo: "Testing navigation to Alertas..."
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas"
+
+- echo: "Testing navigation to Ajustes..."
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ajustes|Configuración"
+
+- echo: "Returning to Inicio..."
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+
+- echo: "✓ Test completed successfully!"

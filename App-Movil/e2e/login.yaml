@@ -1,0 +1,84 @@
+appId: com.transiloja.app
+---
+# Limpiar estado y lanzar app
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 15000
+
+# Test 1: Login exitoso con credenciales válidas
+# Verificar si ya estamos en la pantalla de login o si necesitamos navegar
+- runFlow:
+    when:
+      visible: "Inicio|Alertas"
+    commands:
+      # Si estamos en la app como invitado, ir a Ajustes
+      - tapOn: "Ajustes"
+      - waitForAnimationToEnd
+      - tapOn:
+          id: "settings-login-button"
+      - extendedWaitUntil:
+          visible: "TransiLoja"
+          timeout: 5000
+
+# Verificar que estamos en la pantalla de login
+- assertVisible: "Iniciar Sesión"
+- assertVisible: "Correo electrónico"
+- assertVisible: "Contraseña"
+
+# Ingresar correo electrónico
+- tapOn: "Correo electrónico"
+- inputText: "carolalvaradojime@gmail.com"
+
+# Ingresar contraseña
+- tapOn: "Contraseña"
+- inputText: "123456"
+
+# Hacer scroll para asegurar que el botón sea visible
+- scroll:
+    direction: DOWN
+- waitForAnimationToEnd
+
+# Presionar botón usando testID
+- tapOn:
+    id: "login-submit-button"
+- extendedWaitUntil:
+    visible: "Inicio|Alertas"
+    timeout: 10000
+
+# Test 2: Verificar que el login fue exitoso
+- assertVisible: "Inicio"
+- assertVisible: "Alertas"
+- assertVisible: "Ajustes"
+
+# Test 3: Logout
+- tapOn: "Ajustes"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "logout-button"
+    direction: DOWN
+    timeout: 5000
+- tapOn:
+    id: "logout-button"
+- extendedWaitUntil:
+    visible: "¿Estás seguro"
+    timeout: 3000
+- tapOn: "Cerrar Sesión"
+- extendedWaitUntil:
+    visible: "TransiLoja"
+    timeout: 5000
+
+# Verificar que volvimos a la pantalla de login
+- assertVisible: "TransiLoja"
+- assertVisible:
+    id: "guest-access-button"
+
+# Test 4: Login como invitado
+- tapOn:
+    id: "guest-access-button"
+- extendedWaitUntil:
+    visible: "Inicio|Alertas"
+    timeout: 8000
+- assertVisible: "Inicio"

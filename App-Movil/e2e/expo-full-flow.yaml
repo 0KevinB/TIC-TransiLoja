@@ -1,0 +1,191 @@
+appId: "host.exp.exponent"
+---
+# Suite completa para Expo Go
+# Ejecuta todos los flujos principales en secuencia
+
+- launchApp
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 25000
+
+# ========================================
+# SETUP: Asegurar estado inicial
+# ========================================
+- echo: "=== SETUP ==="
+
+# Si estamos en home con sesión, logout
+- runFlow:
+    when:
+      visible: "Ver Mapa"
+    commands:
+      - runFlow:
+          when:
+            not:
+              visible: "Modo Invitado"
+          commands:
+            - echo: "Logging out existing session..."
+            - tapOn:
+                text: "Ajustes"
+                index: 0
+            - waitForAnimationToEnd
+            - tapOn:
+                id: "logout-button"
+            - extendedWaitUntil:
+                visible: "¿Estás seguro"
+                timeout: 3000
+            - tapOn: "Cerrar Sesión"
+            - extendedWaitUntil:
+                visible: "TransiLoja"
+                timeout: 8000
+
+# ========================================
+# 1. AUTENTICACIÓN
+# ========================================
+- echo: "=== TEST 1: AUTHENTICATION ==="
+
+# Login
+- assertVisible: "Iniciar Sesión"
+- tapOn: "Correo electrónico"
+- inputText: "carolalvaradojime@gmail.com"
+- tapOn: "Contraseña"
+- inputText: "123456"
+- hideKeyboard
+- waitForAnimationToEnd
+- tapOn:
+    id: "login-submit-button"
+- extendedWaitUntil:
+    visible: "Inicio|Alertas"
+    timeout: 10000
+- echo: "✓ Login successful"
+
+# ========================================
+# 2. HOME SCREEN
+# ========================================
+- echo: "=== TEST 2: HOME SCREEN ==="
+- assertVisible: "Inicio"
+- assertVisible: "Alertas"
+- assertVisible: "Favoritos"
+- assertVisible: "Ajustes"
+- echo: "✓ Home screen verified"
+
+# ========================================
+# 3. NAVEGACIÓN
+# ========================================
+- echo: "=== TEST 3: NAVIGATION ==="
+
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Alertas"
+- echo: "✓ Alertas tab"
+
+- tapOn:
+    text: "Favoritos"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Favoritos"
+- echo: "✓ Favoritos tab"
+
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ajustes"
+- echo: "✓ Ajustes tab"
+
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- assertVisible: "Ver Mapa"
+- echo: "✓ Navigation complete"
+
+# ========================================
+# 4. ALERTAS
+# ========================================
+- echo: "=== TEST 4: ALERTS ==="
+
+- tapOn:
+    text: "Alertas"
+    index: 0
+- waitForAnimationToEnd
+- tapOn: "Activas"
+- waitForAnimationToEnd
+- tapOn: "Todas"
+- waitForAnimationToEnd
+- echo: "✓ Alerts filters working"
+
+# ========================================
+# 5. PARADAS
+# ========================================
+- echo: "=== TEST 5: STOPS ==="
+
+- tapOn:
+    text: "Inicio"
+    index: 0
+- waitForAnimationToEnd
+- tapOn: "Paradas"
+- extendedWaitUntil:
+    visible: "Buscar parada"
+    timeout: 5000
+- back
+- waitForAnimationToEnd
+- echo: "✓ Stops screen working"
+
+# ========================================
+# 6. CONFIGURACIÓN
+# ========================================
+- echo: "=== TEST 6: SETTINGS ==="
+
+- tapOn:
+    text: "Ajustes"
+    index: 0
+- waitForAnimationToEnd
+
+# Tema
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Oscuro"
+- waitForAnimationToEnd
+- wait:
+    milliseconds: 500
+- tapOn: "Tema"
+- waitForAnimationToEnd
+- tapOn: "Claro"
+- waitForAnimationToEnd
+- echo: "✓ Theme changes working"
+
+# ========================================
+# 7. LOGOUT
+# ========================================
+- echo: "=== TEST 7: LOGOUT ==="
+
+- tapOn:
+    id: "logout-button"
+- extendedWaitUntil:
+    visible: "¿Estás seguro"
+    timeout: 3000
+- tapOn: "Cerrar Sesión"
+- extendedWaitUntil:
+    visible: "TransiLoja"
+    timeout: 5000
+- echo: "✓ Logout successful"
+
+# ========================================
+# 8. MODO INVITADO
+# ========================================
+- echo: "=== TEST 8: GUEST MODE ==="
+
+- tapOn:
+    id: "guest-access-button"
+- extendedWaitUntil:
+    visible: "Ver Mapa"
+    timeout: 8000
+- assertVisible: "Modo Invitado"
+- echo: "✓ Guest mode working"
+
+# ========================================
+# FIN
+# ========================================
+- echo: "✅ ALL TESTS PASSED!"

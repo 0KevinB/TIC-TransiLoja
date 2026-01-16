@@ -1,0 +1,11 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,wheelchair_boarding
+STOP_001,P01,Parada 1,Parada en Colinas Lojanas,-4.018405827014732,-79.211243391037,ZONA_1,,0,,1
+STOP_002,P02,Parada 2,Parada intermedia,-4.017769030385302,-79.2100712656975,ZONA_1,,0,,1
+STOP_003,P03,Parada 3,Parada en El Paraiso,-4.016749619620154,-79.2089742422104,ZONA_1,,0,,1
+STOP_004,P04,Terminal La Tebaida,Estación principal SITU,-4.0109119,-79.2031701,ZONA_1,,1,,1
+STOP_005,P05,Coliseo,Parada cerca del Coliseo,-4.00626,-79.2038856,ZONA_1,,0,,0
+STOP_006,P06,Benjamín Carrión,Parada con refugio,-3.9946652,-79.205295,ZONA_1,,0,,1
+STOP_007,P07,Miguel Riofrío,Parada en zona norte,-3.9996555,-79.2047009,ZONA_1,,0,,0
+STOP_008,P08,Puente Bolívar,Parada Puente Bolívar,-3.989715,-79.2053284,ZONA_1,,0,,0
+STOP_009,P09,Filipinas,Parada Filipinas - Línea 12,-4.0101421,-79.2107233,ZONA_2,,0,,0
+STOP_010,P10,Estadio,Parada cerca del Estadio,-4.0020982,-79.1968578,ZONA_2,,0,,0

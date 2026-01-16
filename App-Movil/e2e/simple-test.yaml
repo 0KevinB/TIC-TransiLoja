@@ -1,0 +1,44 @@
+appId: com.transiloja.app
+---
+# Prueba simple para verificar que la app funciona
+
+# Limpiar estado y lanzar app
+- launchApp:
+    clearState: true
+
+# Esperar a que algo sea visible
+- extendedWaitUntil:
+    visible: ".*"
+    timeout: 15000
+
+# Copiar la jerarquía de la UI para debugging
+- copyTextFrom: ".*"
+- echo: "App launched successfully. Checking what's visible..."
+
+# Intentar ver si estamos en login o en home
+- runFlow:
+    when:
+      visible: "Continuar como Invitado"
+    commands:
+      - echo: "✓ Login screen detected"
+      - assertVisible: "Iniciar Sesión"
+      # Nota: Este botón tiene ícono, usamos regex flexible
+      - tapOn:
+          text: ".*Continuar como Invitado"
+      - extendedWaitUntil:
+          visible: "Inicio|Alertas"
+          timeout: 8000
+
+- runFlow:
+    when:
+      visible: "Ver Mapa"
+    commands:
+      - echo: "✓ Home screen detected"
+      - assertVisible: "Planificar Viaje"
+
+# Final check
+- extendedWaitUntil:
+    visible: "Ver Mapa|Planificar Viaje"
+    timeout: 3000
+
+- echo: "✓ Test completed successfully!"
